@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-render_informe.py — Arma el informe de auditoría (PDF)
+render_informe.py: arma el informe de auditoría (PDF)
 a partir de un JSON con el contenido. Sin IA, sin dependencias: Python stdlib + un
 navegador Chromium (Chrome o Edge) en modo headless para imprimir el PDF.
 

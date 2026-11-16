@@ -32,7 +32,7 @@ tendencia es decir "eso ya lo hace la skill" y dejarlo afuera.
 | Avisos | `listar_foros(course_id)`: cuántos avisos tiene el foro de la comisión | Qué avisos publica, cada cuánto, cómo controla las fechas. |
 | Informes | No hay dato en el campus | Qué informes arma, para quién, cada cuánto. |
 | Material del aula | `auditar_aula(course_id, unidad=N)` o el aula entera | Si revisa apuntes, videos o código de ejemplo, y cómo. |
-| Otras tareas | — | "¿Hay algo más que hagas seguido y te lleve tiempo?" |
+| Otras tareas | No hay dato en el campus | "¿Hay algo más que hagas seguido y te lleve tiempo?" |
 
 Si una tool falla o devuelve vacío, decilo y preguntale al tutor el dato. Nunca
 rellenes un número que no salió del campus o del tutor.
@@ -88,7 +88,7 @@ valores exactos que acepta la planilla.
 | Prioridad y estado (juntos) | Interactiva, tu propuesta primero con "(Recomendado)" y el porqué | Ej.: Alta / En curso · Alta / Pendiente · Media / En curso |
 | Temas o casos de cada área | Interactiva, selección múltiple, armada con lo que viste en el aula | Ej.: Parciales y recuperatorios · TPI y video · Notas y condición · Inicio de cursada |
 | ¿Se puede automatizar? | Interactiva | Sí · No · A evaluar |
-| Qué hace hoy, por qué lleva tiempo, idea de automatización | Lo redactás vos con sus respuestas y se lo mostrás en el borrador | — |
+| Qué hace hoy, por qué lleva tiempo, idea de automatización | Lo redactás vos con sus respuestas y se lo mostrás en el borrador | No lleva opciones |
 | OK del borrador | Interactiva | Generar el PDF · Cambiar algo |
 
 Cada pregunta interactiva tiene que entenderse sola: nombrá el área o la tarea en el

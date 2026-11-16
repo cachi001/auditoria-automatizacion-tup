@@ -55,7 +55,7 @@ entrevista sin datos del aula.
 
 ---
 
-## Fase 1 — Presentar y ubicar al tutor
+## Fase 1: Presentar y ubicar al tutor
 
 1. Contale en dos líneas qué van a hacer: revisar su aula, unas preguntas por área,
    el PDF y, al final, la carga en la planilla y en el Drive de su materia.
@@ -78,7 +78,7 @@ campus" en `references/entrevista.md`.
 
 ---
 
-## Fase 2 — Relevar el aula (solo lectura)
+## Fase 2: Relevar el aula (solo lectura)
 
 Leé `references/entrevista.md`. Traé los hechos del aula con las tools de la tabla:
 cantidad y tipo de tareas, avisos del foro de la comisión, mensajes y foros pendientes
@@ -90,7 +90,7 @@ de la entrevista: el tutor elige y corrige en vez de contar todo de cero.
 
 ---
 
-## Fase 3 — Entrevista guiada, sin abrumar
+## Fase 3: Entrevista guiada, sin abrumar
 
 Vos guiás: armás las opciones con lo que viste en el aula, proponés la prioridad y
 redactás. El tutor elige, corrige y **tiene la última palabra**. El objetivo es que
@@ -140,7 +140,7 @@ insistas.
 
 ---
 
-## Fase 4 — Borrador y aprobación
+## Fase 4: Borrador y aprobación
 
 1. Leé `references/redaccion.md` y escribí `informe.json` en la carpeta de trabajo del
    tutor, con entre 5 y 8 tareas. Solo entran las tareas que el tutor confirmó, con la
@@ -152,7 +152,7 @@ insistas.
 
 ---
 
-## Fase 5 — Generar el PDF
+## Fase 5: Generar el PDF
 
 ```bash
 python <carpeta de esta skill>/scripts/render_informe.py informe.json
@@ -170,7 +170,7 @@ Fase 6 desde el mismo JSON.
 
 ---
 
-## Fase 6 — Cargar las planillas y entregar
+## Fase 6: Cargar las planillas y entregar
 
 Leé `references/planillas.md`. Lo recomendado es cargar todo con los **conectores de
 Google Drive y Google Sheets**, para que el tutor no tenga que copiar nada:

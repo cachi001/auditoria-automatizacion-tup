@@ -1,0 +1,6 @@
+interface:
+  display_name: "Auditoría de Automatización TUP"
+  short_description: "Informe de la auditoría de tareas de tutoría TUP"
+  default_prompt: "Use $auditoria-automatizacion-tup para armar mi informe de la auditoría de tareas de tutoría de mi materia."
+policy:
+  allow_implicit_invocation: true

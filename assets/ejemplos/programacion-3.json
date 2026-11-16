@@ -1,0 +1,149 @@
+{
+ "materia": "Programación 3",
+ "comision": "8",
+ "rol": "Tutor",
+ "nombre": "Emiliano Caceres",
+ "fecha": "16/11/2026",
+ "relevamiento": [
+  "Se relevó el aula de Programación 3 con la skill TUP Campus Navigator, en modo de solo lectura, para la comisión 8 (26 alumnos). Después se repasó con el tutor cada área de la tutoría: corrección de prácticas, integradores y parciales, coloquio oral, seguimiento, mensajería, foros, avisos y material del aula. En cada tarea se indica qué resuelve ya cada herramienta y qué sigue necesitando al tutor.",
+  "Datos del aula al momento del relevamiento: 43 tareas (cierres de unidad, unas 23 prácticas y 7 integradores y proyectos); 665 entregas corregidas con una demora mediana de 0,4 días y ninguna esperando corrección; 3 alumnos que entran al campus pero hace 7 días o más que no abren la materia, 5 desenganchados y 2 que nunca la abrieron; una consulta de foro sin responder sobre un error de IntelliJ con Lombok; mensajes privados sobre la nota de la pregunta oral del segundo parcial; un foro de avisos de la comisión con 117 avisos en el semestre. Los tiempos de intervención de este informe son una estimación de referencia, para mostrar cómo se completa el informe."
+ ],
+ "conclusion": [
+  "En total, la intervención del tutor en estas tareas supera las 11 horas por semana, y más de 10 corresponden a las tareas de prioridad alta. El mayor peso está en la corrección: hay muchas más entregas que en otras materias y cada proyecto hay que ejecutarlo para saber si funciona. A eso se suma la organización del coloquio oral, que hoy no tiene ninguna parte automatizada.",
+  "Conviene empezar por automatizar la compilación y ejecución de las entregas, que es lo que más tiempo consume, y en paralelo los avisos a los alumnos que no entran al aula, que son urgentes."
+ ],
+ "pasos": true,
+ "tareas": [
+  {
+   "prioridad": "alta",
+   "titulo": "Corrección de prácticas, integradores y parciales",
+   "hoy": "La skill lista las entregas pendientes de corregir y puede pasarlas por Active-IA, que lee el código y propone la nota. Lo manual es descargar cada proyecto, compilarlo y ejecutarlo para comprobar que funciona, porque la herramienta no ejecuta el código.",
+   "frecuencia": "Todas las semanas, con picos en cada integrador y parcial.",
+   "por_que": "Con 43 tareas en el aula el volumen es muy alto: en lo que va del cuatrimestre se corrigieron 665 entregas, con una demora mediana de 0,4 días. Cada proyecto en Java y Spring hay que levantarlo, y llegan comprimidos grandes, a veces con carpetas de dependencias que hay que limpiar antes de revisar.",
+   "como_automatizar": "Un proceso que compile y ejecute cada entrega automáticamente y le pase el resultado a la corrección, para que el tutor revise solo los casos con errores.",
+   "unidad": "Prácticas, integradores y parciales",
+   "hallazgo": "La skill lista y corrige con Active-IA, pero cada proyecto se compila y ejecuta a mano.",
+   "evidencia": "Link a captura de las entregas pendientes",
+   "automatizable": "Sí",
+   "como_corto": "Compilación y ejecución automática de cada entrega antes de corregir.",
+   "estado": "En curso",
+   "estado_motivo": "La skill lista las entregas y Active-IA propone la nota; compilar y ejecutar cada proyecto sigue a cargo del tutor.",
+   "falta": "saber si cada proyecto funciona sin tener que compilarlo y ejecutarlo a mano",
+   "tiempo_semanal": "Más de 6 horas"
+  },
+  {
+   "prioridad": "alta",
+   "titulo": "Coloquio oral del segundo parcial",
+   "hoy": "Los turnos se organizan con una planilla y un foro de turnos, y las preguntas salen de la lista oficial de la cátedra. Todo eso se arma y se mantiene a mano.",
+   "frecuencia": "En cada instancia del segundo parcial y su recuperatorio.",
+   "por_que": "Hay que cargar cada turno, avisar a cada alumno su horario, atender los cambios y preparar las preguntas para cada uno.",
+   "como_automatizar": "Una inscripción a turnos que se cargue sola en la planilla y envíe el aviso con el horario, y una selección automática de preguntas desde la lista oficial.",
+   "unidad": "Segundo parcial",
+   "hallazgo": "Turnos, avisos y preguntas del coloquio armados a mano.",
+   "evidencia": "Link a la planilla de turnos",
+   "automatizable": "Sí",
+   "como_corto": "Inscripción a turnos automática con aviso y selección de preguntas.",
+   "estado": "Pendiente",
+   "estado_motivo": "Ninguna herramienta resuelve una parte: turnos, avisos y preguntas se arman a mano.",
+   "falta": "que los turnos, los avisos y la selección de preguntas no dependan del tutor",
+   "tiempo_semanal": "3 a 6 horas"
+  },
+  {
+   "prioridad": "alta",
+   "titulo": "Alumnos que no ingresan al aula",
+   "hoy": "La skill lista los alumnos que no entran al aula hace varios días. Lo manual es avisarles a cada uno.",
+   "frecuencia": "Semanal.",
+   "por_que": "Los avisos se envían uno por uno, y no pueden esperar: en esta materia las entregas se acumulan rápido y un alumno que deja de entrar queda muy atrasado.",
+   "como_automatizar": "Un aviso automático con plantilla a quienes superen una cantidad de días sin ingresar, con copia al tutor para hacer el seguimiento.",
+   "unidad": "Todas las unidades",
+   "hallazgo": "La skill lista quién no entra al aula; los avisos se envían uno por uno.",
+   "evidencia": "Link a captura del listado",
+   "automatizable": "Sí",
+   "como_corto": "Aviso automático con plantilla según los días sin ingresar.",
+   "estado": "En curso",
+   "estado_motivo": "La skill ya detecta quién no entra al aula; avisarle a cada uno sigue a cargo del tutor.",
+   "falta": "que el aviso a cada alumno no dependa del tutor",
+   "tiempo_semanal": "Menos de 1 hora"
+  },
+  {
+   "prioridad": "alta",
+   "titulo": "Seguimiento de alumnos atrasados",
+   "hoy": "La skill lista por alumno las prácticas e integradores que no entregó o no aprobó. Lo manual es escribirle a cada alumno con lo que adeuda.",
+   "frecuencia": "Semanal, y antes de cada parcial.",
+   "por_que": "Con tantas actividades, cada mensaje es largo y se arma por separado.",
+   "como_automatizar": "Que la skill arme el recordatorio con una plantilla que liste las actividades pendientes de cada alumno, y lo envíe después de una revisión rápida del tutor.",
+   "unidad": "Todas las unidades",
+   "hallazgo": "La skill lista quién adeuda, pero cada recordatorio se escribe y envía por separado.",
+   "evidencia": "Link a la planilla de seguimiento",
+   "automatizable": "Sí",
+   "como_corto": "Recordatorio con plantilla armado y enviado por la misma skill.",
+   "estado": "En curso",
+   "estado_motivo": "La skill ya arma la lista de prácticas e integradores adeudados; escribir cada mensaje sigue a cargo del tutor.",
+   "falta": "que redactar y enviar cada recordatorio no dependa del tutor",
+   "tiempo_semanal": "1 a 3 horas"
+  },
+  {
+   "prioridad": "media",
+   "titulo": "Consultas sobre el entorno de trabajo",
+   "hoy": "La skill lista los mensajes y las consultas de foro que esperan respuesta; hoy hay una consulta de foro sin responder sobre un error de IntelliJ con Lombok. Las respuestas se escriben a mano, y muchas se repiten: versión de JDK, Gradle, dependencias que no bajan, errores al levantar el proyecto.",
+   "frecuencia": "Semanal, con picos al comenzar cada unidad nueva y antes de los parciales.",
+   "por_que": "Cada caso requiere entender el error del alumno y explicar la solución paso a paso.",
+   "como_automatizar": "Una guía de instalación y de errores frecuentes fijada en el aula, y respuestas modelo que la skill proponga para cada caso repetido.",
+   "unidad": "Unidades de Java y Spring",
+   "hallazgo": "La skill lista los mensajes; las consultas de entorno se responden a mano.",
+   "evidencia": "Link a captura de la bandeja de mensajes",
+   "automatizable": "Sí",
+   "como_corto": "Guía de errores frecuentes y respuestas modelo propuestas por la skill.",
+   "estado": "En curso",
+   "estado_motivo": "La skill ya lista los mensajes sin responder; diagnosticar cada error y explicar la solución sigue a cargo del tutor.",
+   "falta": "que los errores de entorno que se repiten no requieran una explicación desde cero",
+   "tiempo_semanal": "1 a 3 horas"
+  },
+  {
+   "prioridad": "media",
+   "titulo": "Avisos de fechas en el foro",
+   "hoy": "La skill publica el aviso en el foro de la comisión, pero el texto se redacta a mano y se controla que las fechas coincidan con las del aula.",
+   "frecuencia": "Varias veces por mes.",
+   "por_que": "Las fechas cambian seguido por las reprogramaciones de parciales y recuperatorios, y cada cambio lleva un aviso nuevo.",
+   "como_automatizar": "Plantillas de aviso que tomen las fechas directamente del aula.",
+   "unidad": "Foro de avisos",
+   "hallazgo": "La skill publica el aviso; el texto y las fechas se arman a mano.",
+   "evidencia": "Link a un aviso publicado",
+   "automatizable": "Sí",
+   "como_corto": "Plantillas de aviso que tomen las fechas del aula.",
+   "estado": "En curso",
+   "estado_motivo": "La skill publica el aviso; redactarlo y actualizar las fechas en cada reprogramación sigue a cargo del tutor.",
+   "falta": "que el texto y las fechas de cada aviso no se armen a mano en cada reprogramación",
+   "tiempo_semanal": "Menos de 1 hora"
+  },
+  {
+   "prioridad": "baja",
+   "titulo": "Revisión del material de cada unidad",
+   "hoy": "La auditoría del aula de la skill detecta links rotos; en esta revisión marcó un video de YouTube que ya no existe. El contenido de los apuntes y el código de los ejemplos se revisan a mano.",
+   "frecuencia": "Al comienzo de cada unidad.",
+   "por_que": "Hay que leer cada material y probar que el código de los ejemplos siga funcionando.",
+   "como_automatizar": "Los links ya se controlan con la skill. El contenido y el código necesitan la revisión del tutor, por eso queda a evaluar.",
+   "unidad": "Material de cada unidad",
+   "hallazgo": "La skill detecta links rotos; el contenido y el código se revisan a mano.",
+   "evidencia": "Link a la unidad en el aula",
+   "automatizable": "A evaluar",
+   "como_corto": "Links ya controlados; el contenido y el código necesitan revisión.",
+   "estado": "En curso",
+   "estado_motivo": "La skill ya detecta links rotos; revisar el contenido y probar el código de los ejemplos sigue a cargo del tutor.",
+   "falta": "saber si el código de los ejemplos sigue funcionando sin probarlo a mano",
+   "tiempo_semanal": "Menos de 1 hora"
+  }
+ ],
+ "herramientas": [
+  {
+   "nombre": "Skill TUP Campus Navigator",
+   "resuelve": "Consulta Moodle desde Claude Code: quién adeuda, quién no entra al aula, mensajes y foros pendientes, entregas sin corregir. También publica avisos y carga notas, siempre con el OK del tutor.",
+   "falta": "Redactar cada mensaje, aviso y respuesta, decidir qué enviar y revisar lo que la skill encuentra."
+  },
+  {
+   "nombre": "Active-IA",
+   "resuelve": "Corrige las entregas con la rúbrica y propone la nota y la devolución.",
+   "falta": "Revisar cada corrección antes de publicarla y resolver los casos que no toma bien."
+  }
+ ]
+}

@@ -23,12 +23,12 @@
    "como_automatizar": "Que la misma skill arme el recordatorio con una plantilla que complete el nombre y las actividades que adeuda cada alumno, y lo envíe después de una revisión rápida del tutor.",
    "unidad": "Todas las unidades",
    "hallazgo": "La skill lista quién adeuda, pero cada recordatorio se escribe y envía por separado.",
-   "evidencia": "Link a la planilla de atrasados",
    "automatizable": "Sí",
    "como_corto": "Recordatorio con plantilla armado y enviado por la misma skill.",
    "estado": "En curso",
    "estado_motivo": "La skill ya arma la lista de quién adeuda cada cierre de unidad; escribir y enviar cada recordatorio sigue a cargo del tutor.",
    "falta": "que redactar y enviar cada recordatorio no dependa del tutor",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "1 a 3 horas"
   },
   {
@@ -40,12 +40,12 @@
    "como_automatizar": "Un aviso automático con plantilla a quienes superen una cantidad de días sin ingresar, con copia al tutor para hacer el seguimiento.",
    "unidad": "Todas las unidades",
    "hallazgo": "La skill lista quién no entra al aula; los avisos se envían uno por uno.",
-   "evidencia": "Link a captura del listado",
    "automatizable": "Sí",
    "como_corto": "Aviso automático con plantilla según los días sin ingresar.",
    "estado": "En curso",
    "estado_motivo": "La skill ya detecta quién no entra al aula; avisarle a cada uno sigue a cargo del tutor.",
    "falta": "que el aviso a cada alumno no dependa del tutor",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "1 a 3 horas"
   },
   {
@@ -57,12 +57,12 @@
    "como_automatizar": "Preguntas frecuentes fijadas en el aula y respuestas modelo que la skill proponga para cada consulta repetida, listas para revisar y enviar.",
    "unidad": "Inicio del semestre y parciales",
    "hallazgo": "La skill lista los mensajes sin responder, pero cada respuesta se escribe a mano.",
-   "evidencia": "Link a captura de la bandeja de mensajes",
    "automatizable": "Sí",
    "como_corto": "Preguntas frecuentes en el aula y respuestas modelo propuestas por la skill.",
    "estado": "En curso",
    "estado_motivo": "La skill ya lista los mensajes sin responder y aparta los agradecimientos; cada respuesta la escribe el tutor.",
    "falta": "que las consultas que se repiten no requieran una respuesta escrita desde cero",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "3 a 6 horas"
   },
   {
@@ -74,12 +74,12 @@
    "como_automatizar": "Detectar antes de corregir las reentregas y los archivos que la herramienta no acepta, controlar automáticamente la duración del video y avisar cuáles necesitan revisión del tutor.",
    "unidad": "Trabajo Práctico Integrador",
    "hallazgo": "La skill corrige con Active-IA y carga la nota; los videos y los casos especiales se revisan a mano.",
-   "evidencia": "Link a captura de la tarea en Moodle",
    "automatizable": "Sí",
    "como_corto": "Detectar antes de corregir los casos especiales y controlar la duración del video.",
    "estado": "En curso",
    "estado_motivo": "Active-IA corrige y la skill carga la nota y la devolución; mirar los videos y resolver los casos especiales sigue a cargo del tutor.",
    "falta": "que los videos y los casos especiales no se detecten recién al revisar a mano",
+   "con_que": "con Active-IA, la skill y revisión del tutor",
    "tiempo_semanal": "3 a 6 horas"
   },
   {
@@ -91,12 +91,12 @@
    "como_automatizar": "Plantillas de aviso que tomen las fechas directamente del aula.",
    "unidad": "Foro de avisos",
    "hallazgo": "La skill publica el aviso; el texto y las fechas se arman a mano.",
-   "evidencia": "Link a un aviso publicado",
    "automatizable": "Sí",
    "como_corto": "Plantillas de aviso que tomen las fechas del aula.",
    "estado": "En curso",
    "estado_motivo": "La skill publica el aviso; redactarlo y controlar las fechas sigue a cargo del tutor.",
    "falta": "que el texto y las fechas de cada aviso no se armen a mano",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "Menos de 1 hora"
   },
   {
@@ -108,12 +108,12 @@
    "como_automatizar": "Acordar con coordinación un formato fijo, para que el informe salga listo sin ajustes.",
    "unidad": "Informes a coordinación",
    "hallazgo": "La skill genera el informe; el formato se ajusta a mano a cada pedido.",
-   "evidencia": "Link al último informe enviado",
    "automatizable": "Sí",
    "como_corto": "Formato fijo acordado con coordinación.",
    "estado": "En curso",
    "estado_motivo": "La skill genera el informe con los datos del aula; ajustar el formato a cada pedido sigue a cargo del tutor.",
    "falta": "que el informe no haya que adaptarlo a cada pedido",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "Menos de 1 hora"
   },
   {
@@ -125,12 +125,12 @@
    "como_automatizar": "Los links ya se controlan con la skill. La revisión del contenido necesita la lectura del tutor, por eso queda a evaluar.",
    "unidad": "Material de cada unidad",
    "hallazgo": "La skill detecta links rotos y que piden sesión; el contenido se revisa leyendo.",
-   "evidencia": "Link a la unidad en el aula",
    "automatizable": "A evaluar",
    "como_corto": "Links ya controlados; el contenido necesita la lectura del tutor.",
    "estado": "En curso",
    "estado_motivo": "La skill ya detecta links rotos y recursos que piden iniciar sesión; leer el contenido sigue a cargo del tutor.",
    "falta": "el contenido sigue necesitando la lectura del tutor; no hay una parte automatizable pendiente",
+   "con_que": "con la skill y lectura del tutor",
    "tiempo_semanal": "Menos de 1 hora"
   }
  ],

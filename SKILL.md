@@ -114,22 +114,28 @@ Por cada bloque:
    desde el relevamiento. Ejemplo: "Hoy tenés 3 mensajes esperando respuesta y las
    preguntas que se ven son del parcial y del video. ¿Qué consultas se te repiten
    más?", con selección múltiple de los temas que viste.
-2. En la misma tanda preguntá **frecuencia y tiempo de intervención en una sola
+2. En la misma tanda preguntá **cómo hace cada tarea**: qué parte le resuelve la
+   skill del campus (o Active-IA) y qué parte sigue haciendo él, aunque sea con la
+   skill. Opciones con escenarios ("La skill me arma la lista y yo redacto y envío
+   cada mensaje" · "La skill arma y envía, yo reviso" · "A mano en Moodle"). Va en
+   `con_que` y es la base del porqué del estado: sin esto, "menos de 1 hora" no dice
+   si es a mano o con la skill.
+3. En la misma tanda preguntá **frecuencia y tiempo de intervención en una sola
    pregunta**, con opciones que digan las dos cosas ("Diaria, mucho tiempo: todos los
    días, más de 1 hora"). El tiempo es el dato más importante del informe: es lo que
    muestra cuánto se ahorraría automatizando.
-3. **Redactá vos** qué hace hoy, por qué le lleva tiempo y cómo se podría automatizar,
+4. **Redactá vos** qué hace hoy, por qué le lleva tiempo y cómo se podría automatizar,
    a partir de sus respuestas y de lo que viste en el aula. No le pidas que lo escriba.
-4. **Proponé prioridad y estado** en una sola pregunta, con tu propuesta primero y
+5. **Proponé prioridad y estado** en una sola pregunta, con tu propuesta primero y
    "(Recomendado)", y una línea con el porqué. Ejemplo: "Para 'Seguimiento de
    atrasados' propongo Alta / En curso: la skill te arma la lista, pero vos escribís
    cada mensaje. ¿Confirmás?". Lo que elija el tutor es lo que va.
    **Ese porqué es el motivo del estado** (`estado_motivo`), y agregá **qué falta**
    para resolver la tarea (`falta`): el informe los muestra en la línea del estado,
    porque un estado sin explicación no le dice nada a quien lo lee.
-5. Si dice que un área no la hace o no le lleva tiempo, pasá a la siguiente. Si un
-   bloque tiene dos tareas que llevan tiempo, la prioridad de la segunda puede ir en
-   la tanda del bloque siguiente, para no pasar de 4 preguntas.
+6. Si dice que un área no la hace o no le lleva tiempo, pasá a la siguiente. Si un
+   bloque tiene dos tareas que llevan tiempo, la prioridad de la segunda (o su "cómo
+   la hacés") puede ir en la tanda del bloque siguiente, para no pasar de 4 preguntas.
 
 En el bloque 5 suelen aparecer las tareas propias de cada materia (coloquios, videos,
 entornos de trabajo). Si el tutor está en varias materias, en la segunda no repitas
@@ -146,7 +152,9 @@ insistas.
    tutor, con entre 5 y 8 tareas. Solo entran las tareas que el tutor confirmó, con la
    prioridad, el estado y el tiempo que eligió.
 2. Mostrale al tutor un resumen en el chat: las tareas por prioridad, una línea cada
-   una con su tiempo por semana, el total y la conclusión. **Esperá su OK antes de generar el PDF**, con una pregunta
+   una con su tiempo por semana **y con qué lo hace** ("Menos de 1 hora, con la
+   skill"), **el estado con su porqué y qué falta** (un estado solo no le dice nada),
+   el total y la conclusión. **Esperá su OK antes de generar el PDF**, con una pregunta
    interactiva: "Generar el PDF" o "Cambiar algo". Si pide cambios,
    corregí el JSON, no el PDF.
 

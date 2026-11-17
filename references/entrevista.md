@@ -84,6 +84,7 @@ valores exactos que acepta la planilla.
 | Materia (si está en varias) | Interactiva | Las materias que devolvió `mi_comision` |
 | Herramientas que usa | Interactiva, selección múltiple | Skill TUP Campus Navigator · Active-IA · Planillas propias · Ninguna |
 | ¿Esta tarea te lleva tiempo? (por cada área) | Interactiva | Sí, mucho · Algo · Casi nada · No la hago |
+| Cómo la hace hoy: qué resuelve la skill (o Active-IA) y qué hace él | Interactiva, escenarios armados con el aula | Ej.: La skill arma la lista y yo escribo cada mensaje · La skill arma y envía, yo reviso · A mano en Moodle (ver el modelo abajo) |
 | Frecuencia y tiempo de intervención (juntos, una pregunta) | Interactiva | Ej.: Diaria, mucho tiempo · Diaria, algo de tiempo · Picos en parciales · Semanal (ver el modelo abajo) |
 | Prioridad y estado (juntos) | Interactiva, tu propuesta primero con "(Recomendado)" y el porqué | Ej.: Alta / En curso · Alta / Pendiente · Media / En curso |
 | Temas o casos de cada área | Interactiva, selección múltiple, armada con lo que viste en el aula | Ej.: Parciales y recuperatorios · TPI y video · Notas y condición · Inicio de cursada |
@@ -109,6 +110,20 @@ tutor puede ver solo el cuadro de la pregunta.
   > 3. Notas y condición: si promocionó, regulariza, qué le falta
   > 4. Inicio de cursada: instalaciones, cómo usar el aula, Git y Colab
 
+- **Preguntá cómo hace cada tarea**, con escenarios armados con la tool del campus
+  que aplica, que distingan lo que resuelve la herramienta, lo que hace con la
+  herramienta pero con su intervención, y lo que hace a mano:
+
+  > Seguimiento de atrasados (Prog I): la skill te puede listar quién adeuda cada
+  > cierre de unidad. ¿Cómo lo hacés hoy?
+  > 1. La skill me arma la lista y yo redacto y envío cada mensaje
+  > 2. La skill arma la lista y envía los mensajes; yo solo reviso el texto
+  > 3. Lo reviso a mano en Moodle y escribo cada mensaje
+
+  Con esto escribís `con_que` ("con la skill TUP Campus Navigator", "a mano en Moodle",
+  "con Active-IA y revisión del tutor"), que el informe muestra junto al tiempo, y es
+  la base del porqué del estado. Sin esta respuesta, "menos de 1 hora" no dice si es a
+  mano o con la skill.
 - **Proponé prioridad y estado juntos**, con tu recomendación primero y el porqué:
 
   > Para la tarea "Seguimiento de atrasados y alumnos que no entran" (Prog I) propongo
@@ -137,6 +152,9 @@ tutor puede ver solo el cuadro de la pregunta.
   > 2. Diaria, algo de tiempo: todos los días, 20 a 60 minutos
   > 3. Picos en parciales: poco en semanas normales, mucho antes de un parcial o entrega
   > 4. Semanal: una o dos veces por semana
+
+  Si ya sabés cómo la hace, decilo en la pregunta ("...y cuánto te lleva, haciéndolo
+  con la skill?"), así el tiempo queda atado a la herramienta.
 
   El tiempo de intervención es el dato que más pesa en el informe. En el JSON va en
   `tiempo_semanal`: pasalo a horas por semana (una de las opciones fijas o "N horas")

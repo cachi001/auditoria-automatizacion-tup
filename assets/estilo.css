@@ -35,4 +35,5 @@ table.planilla tr { break-inside:avoid; }
 table.planilla td.nw { white-space:nowrap; }
 table.planilla.resumen { font-size:9.6pt; margin:4px 0 10px; }
 table.planilla.resumen tr.total td { font-weight:600; background:#d8e8f7; border-top:2px solid #0b3a6e; }
+table.planilla.resumen .con { display:block; font-size:8.6pt; color:#5b6472; margin-top:2px; }
 h3.sub { color:#0b3a6e; }

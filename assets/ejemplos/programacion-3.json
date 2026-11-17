@@ -23,12 +23,12 @@
    "como_automatizar": "Un proceso que compile y ejecute cada entrega automáticamente y le pase el resultado a la corrección, para que el tutor revise solo los casos con errores.",
    "unidad": "Prácticas, integradores y parciales",
    "hallazgo": "La skill lista y corrige con Active-IA, pero cada proyecto se compila y ejecuta a mano.",
-   "evidencia": "Link a captura de las entregas pendientes",
    "automatizable": "Sí",
    "como_corto": "Compilación y ejecución automática de cada entrega antes de corregir.",
    "estado": "En curso",
    "estado_motivo": "La skill lista las entregas y Active-IA propone la nota; compilar y ejecutar cada proyecto sigue a cargo del tutor.",
    "falta": "saber si cada proyecto funciona sin tener que compilarlo y ejecutarlo a mano",
+   "con_que": "con Active-IA, la skill y revisión del tutor",
    "tiempo_semanal": "Más de 6 horas"
   },
   {
@@ -40,12 +40,12 @@
    "como_automatizar": "Una inscripción a turnos que se cargue sola en la planilla y envíe el aviso con el horario, y una selección automática de preguntas desde la lista oficial.",
    "unidad": "Segundo parcial",
    "hallazgo": "Turnos, avisos y preguntas del coloquio armados a mano.",
-   "evidencia": "Link a la planilla de turnos",
    "automatizable": "Sí",
    "como_corto": "Inscripción a turnos automática con aviso y selección de preguntas.",
    "estado": "Pendiente",
    "estado_motivo": "Ninguna herramienta resuelve una parte: turnos, avisos y preguntas se arman a mano.",
    "falta": "que los turnos, los avisos y la selección de preguntas no dependan del tutor",
+   "con_que": "a mano",
    "tiempo_semanal": "3 a 6 horas"
   },
   {
@@ -57,12 +57,12 @@
    "como_automatizar": "Un aviso automático con plantilla a quienes superen una cantidad de días sin ingresar, con copia al tutor para hacer el seguimiento.",
    "unidad": "Todas las unidades",
    "hallazgo": "La skill lista quién no entra al aula; los avisos se envían uno por uno.",
-   "evidencia": "Link a captura del listado",
    "automatizable": "Sí",
    "como_corto": "Aviso automático con plantilla según los días sin ingresar.",
    "estado": "En curso",
    "estado_motivo": "La skill ya detecta quién no entra al aula; avisarle a cada uno sigue a cargo del tutor.",
    "falta": "que el aviso a cada alumno no dependa del tutor",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "Menos de 1 hora"
   },
   {
@@ -74,12 +74,12 @@
    "como_automatizar": "Que la skill arme el recordatorio con una plantilla que liste las actividades pendientes de cada alumno, y lo envíe después de una revisión rápida del tutor.",
    "unidad": "Todas las unidades",
    "hallazgo": "La skill lista quién adeuda, pero cada recordatorio se escribe y envía por separado.",
-   "evidencia": "Link a la planilla de seguimiento",
    "automatizable": "Sí",
    "como_corto": "Recordatorio con plantilla armado y enviado por la misma skill.",
    "estado": "En curso",
    "estado_motivo": "La skill ya arma la lista de prácticas e integradores adeudados; escribir cada mensaje sigue a cargo del tutor.",
    "falta": "que redactar y enviar cada recordatorio no dependa del tutor",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "1 a 3 horas"
   },
   {
@@ -91,12 +91,12 @@
    "como_automatizar": "Una guía de instalación y de errores frecuentes fijada en el aula, y respuestas modelo que la skill proponga para cada caso repetido.",
    "unidad": "Unidades de Java y Spring",
    "hallazgo": "La skill lista los mensajes; las consultas de entorno se responden a mano.",
-   "evidencia": "Link a captura de la bandeja de mensajes",
    "automatizable": "Sí",
    "como_corto": "Guía de errores frecuentes y respuestas modelo propuestas por la skill.",
    "estado": "En curso",
    "estado_motivo": "La skill ya lista los mensajes sin responder; diagnosticar cada error y explicar la solución sigue a cargo del tutor.",
    "falta": "que los errores de entorno que se repiten no requieran una explicación desde cero",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "1 a 3 horas"
   },
   {
@@ -108,12 +108,12 @@
    "como_automatizar": "Plantillas de aviso que tomen las fechas directamente del aula.",
    "unidad": "Foro de avisos",
    "hallazgo": "La skill publica el aviso; el texto y las fechas se arman a mano.",
-   "evidencia": "Link a un aviso publicado",
    "automatizable": "Sí",
    "como_corto": "Plantillas de aviso que tomen las fechas del aula.",
    "estado": "En curso",
    "estado_motivo": "La skill publica el aviso; redactarlo y actualizar las fechas en cada reprogramación sigue a cargo del tutor.",
    "falta": "que el texto y las fechas de cada aviso no se armen a mano en cada reprogramación",
+   "con_que": "con la skill TUP Campus Navigator",
    "tiempo_semanal": "Menos de 1 hora"
   },
   {
@@ -125,12 +125,12 @@
    "como_automatizar": "Los links ya se controlan con la skill. El contenido y el código necesitan la revisión del tutor, por eso queda a evaluar.",
    "unidad": "Material de cada unidad",
    "hallazgo": "La skill detecta links rotos; el contenido y el código se revisan a mano.",
-   "evidencia": "Link a la unidad en el aula",
    "automatizable": "A evaluar",
    "como_corto": "Links ya controlados; el contenido y el código necesitan revisión.",
    "estado": "En curso",
    "estado_motivo": "La skill ya detecta links rotos; revisar el contenido y probar el código de los ejemplos sigue a cargo del tutor.",
    "falta": "saber si el código de los ejemplos sigue funcionando sin probarlo a mano",
+   "con_que": "con la skill y lectura del tutor",
    "tiempo_semanal": "Menos de 1 hora"
   }
  ],

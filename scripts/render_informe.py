@@ -29,7 +29,8 @@ NOMBRE_PR = {"alta": "Alta", "media": "Media", "baja": "Baja"}
 AUTOMATIZABLE = {"Sí", "No", "A evaluar"}
 ESTADOS = {"Pendiente", "En curso", "Resuelto"}
 CAMPOS_TAREA = ("prioridad", "titulo", "hoy", "frecuencia", "por_que", "como_automatizar",
-                "unidad", "hallazgo", "evidencia", "automatizable", "como_corto", "estado")
+                "unidad", "hallazgo", "automatizable", "como_corto", "estado")
+# Opcionales: tiempo_semanal, con_que, estado_motivo, falta, evidencia (solo links reales).
 
 
 def sin_tildes(s: str) -> str:
@@ -76,6 +77,19 @@ def total_texto(tareas) -> str:
     if mins == maxs:
         return f"{fmt_h(mins)} por semana"
     return f"entre {fmt_h(mins).split()[0]} y {fmt_h(maxs)} por semana"
+
+
+def con_que_html(t: dict) -> str:
+    """Debajo del tiempo en la tabla de resumen: con qué lo hace (skill, a mano, Active-IA)."""
+    c = str(t.get("con_que", "")).strip()
+    return f"<span class='con'>{e(c)}</span>" if c else ""
+
+
+def tiempo_con_que(t: dict) -> str:
+    """"1 a 3 horas, con la skill TUP Campus Navigator": el tiempo atado a la herramienta."""
+    tiempo = str(t.get("tiempo_semanal", "")).strip()
+    c = str(t.get("con_que", "")).strip().rstrip(".")
+    return f"{tiempo.rstrip('.')}, {c[0].lower() + c[1:]}." if tiempo and c else tiempo
 
 
 def validar(d: dict) -> list[str]:
@@ -149,7 +163,7 @@ def armar_html(d: dict) -> str:
              "<th>Frecuencia</th>" + ("<th>Tiempo de intervención</th>" if con_tiempo else "") + "</tr>")
     for x in orden:
         o.append(f"<tr><td>{e(x['titulo'])}</td><td>{NOMBRE_PR[x['prioridad']]}</td><td>{e(x['estado'])}</td>"
-                 f"<td>{e(x['frecuencia'].rstrip('.'))}</td>" + (f"<td>{e(x.get('tiempo_semanal') or 'Sin estimar')}</td>" if con_tiempo else "") + "</tr>")
+                 f"<td>{e(x['frecuencia'].rstrip('.'))}</td>" + (f"<td>{e(x.get('tiempo_semanal') or 'Sin estimar')}{con_que_html(x)}</td>" if con_tiempo else "") + "</tr>")
     if con_tiempo:
         tot = total_texto(d["tareas"])
         alta = [x for x in d["tareas"] if x["prioridad"] == "alta"]
@@ -174,7 +188,7 @@ def armar_html(d: dict) -> str:
                 estado += " Falta: " + x["falta"].strip()[0].lower() + x["falta"].strip()[1:].rstrip(".") + "."
             o.append(f"<div class='hallazgo {pr}'><div class='t'>{e(x['titulo'])}</div><dl>"
                      + fila("Qué se hace hoy", x["hoy"]) + fila("Frecuencia", x["frecuencia"])
-                     + fila("Tiempo de intervención", x.get("tiempo_semanal")) + fila("Por qué lleva tiempo", x["por_que"])
+                     + fila("Tiempo de intervención", tiempo_con_que(x)) + fila("Por qué lleva tiempo", x["por_que"])
                      + fila("Estado", estado)
                      + fila("Cómo automatizar", x["como_automatizar"]) + "</dl></div>")
     o.append(f"<h2><span class='num'>{next(n)}</span>Conclusión</h2>" + "".join(f"<p>{e(x)}</p>" for x in d["conclusion"]))
@@ -185,7 +199,7 @@ def armar_html(d: dict) -> str:
                  "\"Sí\" en \"¿Subió el informe?\" y pegá el link. 4. Cargá cada tarea como una fila en la pestaña Hallazgos.</div>")
     o.append(f"<div class='apaisada'><h2><span class='num'>{next(n)}</span>Cómo se cargan en la pestaña Hallazgos</h2>"
              f"<p>Cada tarea de la sección {n_tareas} es una fila en la pestaña Hallazgos {e(materia)}. Las columnas son las mismas que en "
-             "la planilla. En Evidencia se pega el link a una captura, planilla o mensaje que muestre la tarea.</p>"
+             "la planilla. En Evidencia va el link a este informe, o a una planilla o mensaje que muestre la tarea si el tutor lo tiene.</p>"
              "<p class='leyenda'>Prioridad: Alta, Media o Baja. ¿Automatizable?: Sí, No o A evaluar. Estado: Pendiente (toda la tarea "
              "depende del tutor), En curso (una herramienta ya resuelve una parte) o Resuelto (ya no necesita al tutor).</p>"
              "<table class='planilla'><colgroup><col style='width:8%'><col style='width:9%'><col style='width:6.5%'>"
@@ -195,7 +209,7 @@ def armar_html(d: dict) -> str:
              "<th>Cómo se podría automatizar</th><th>Estado</th></tr>")
     for t in d["tareas"]:
         o.append(f"<tr><td class='nw'>{e(d['fecha'])}</td><td>{e(d['nombre'])}</td><td class='nw'>{e(com)}</td><td>{e(t['unidad'])}</td>"
-                 f"<td>{e(t['hallazgo'])}</td><td>{e(t['evidencia'])}</td><td>{NOMBRE_PR[t['prioridad']]}</td>"
+                 f"<td>{e(t['hallazgo'])}</td><td>{e(str(t.get('evidencia') or '').strip() or 'Link a este informe')}</td><td>{NOMBRE_PR[t['prioridad']]}</td>"
                  f"<td>{e(t['automatizable'])}</td><td>{e(t['como_corto'])}</td><td>{e(t['estado'])}</td></tr>")
     o.append("</table></div></body></html>")
     return "".join(o)

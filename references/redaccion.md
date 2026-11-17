@@ -23,11 +23,11 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
       "hoy": "La skill lista los alumnos que no entran al aula hace varios días. Lo que necesita la intervención del tutor es avisarles a cada uno.",
       "frecuencia": "Semanal.",
       "tiempo_semanal": "1 a 3 horas",
+      "con_que": "con la skill TUP Campus Navigator",
       "por_que": "Los avisos se envían uno por uno y no pueden esperar.",
       "como_automatizar": "Un aviso automático con plantilla a quienes superen una cantidad de días sin ingresar.",
       "unidad": "Todas las unidades",
       "hallazgo": "La skill lista quién no entra al aula; los avisos se envían uno por uno.",
-      "evidencia": "Link a captura del listado",
       "automatizable": "Sí",
       "como_corto": "Aviso automático con plantilla según los días sin ingresar.",
       "estado": "En curso",
@@ -51,6 +51,12 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
   o un número que haya dicho el tutor (`2 horas`). El script arma con esto la tabla de
   resumen y el total; si una tarea no es semanal, estimá con el tutor cuánto le lleva
   en promedio por semana.
+- `con_que`: cómo hace hoy la tarea, según lo que respondió ("con la skill TUP Campus
+  Navigator", "a mano en Moodle", "con Active-IA y revisión del tutor"). El informe lo
+  muestra junto al tiempo, para que se entienda que ese tiempo no es todo a mano.
+- `evidencia`: opcional, y **solo un link real** que te haya pasado el tutor. Nunca
+  pongas textos de ejemplo como "Link a captura". Si no hay, dejalo afuera: en la
+  planilla va el link del PDF subido (Fase 6).
 - `hoy`, `por_que`, `como_automatizar` van en el cuerpo del informe; `hallazgo` y
   `como_corto` son las versiones cortas (una oración) para la fila de la planilla.
 - `estado_motivo` y `falta`: completalos en todas las tareas. El informe los muestra
@@ -66,7 +72,7 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
 - `objetivo` es opcional: si no está, el script usa el texto estándar.
 - `pasos: true` agrega el recuadro "Pasos para entregar el informe". Dejalo en `false`
   salvo que el tutor arme un informe de guía para otros.
-- Ningún campo puede quedar vacío: el script lo rechaza, porque en la planilla una
+- Ningún campo obligatorio puede quedar vacío: el script lo rechaza, porque en la planilla una
   celda vacía no se entiende.
 
 Los informes de referencia están en `assets/ejemplos/programacion-1.json` y

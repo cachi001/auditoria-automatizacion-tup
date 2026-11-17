@@ -15,7 +15,7 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
   "rol": "Tutor",
   "nombre": "Nombre Apellido",
   "fecha": "16/11/2026",
-  "relevamiento": ["Párrafo 1: qué se repasó y con qué herramientas.", "Párrafo 2: cómo se priorizó y los datos del aula."],
+  "relevamiento": ["Un párrafo: qué se repasó, con qué herramientas y cómo se confirmó con el tutor."],
   "tareas": [
     {
       "prioridad": "alta",
@@ -26,10 +26,10 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
       "con_que": "con la skill TUP Campus Navigator",
       "por_que": "Los avisos se envían uno por uno y no pueden esperar.",
       "como_automatizar": "Un aviso automático con plantilla a quienes superen una cantidad de días sin ingresar.",
-      "unidad": "Todas las unidades",
-      "hallazgo": "La skill lista quién no entra al aula; los avisos se envían uno por uno.",
+      "unidad": "Todo el cuatrimestre",
+      "hallazgo": "Los alumnos que dejan de entrar al aula dependen de que el tutor los detecte y les escriba uno por uno; si el aviso llega tarde, el alumno queda muy atrasado y suele no volver.",
       "automatizable": "Sí",
-      "como_corto": "Aviso automático con plantilla según los días sin ingresar.",
+      "como_corto": "Revisión automática semanal que detecte a quien no ingresa hace 7 días o más y le envíe un mensaje con plantilla, con un segundo aviso a los 15 días y copia al tutor para el seguimiento.",
       "estado": "Parcial",
       "estado_motivo": "La skill ya arma la lista de quién no entra; avisarles sigue a cargo del tutor.",
       "falta": "un aviso con plantilla que se envíe solo al pasar cierta cantidad de días sin ingresar."
@@ -59,8 +59,27 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
   muestra junto al tiempo, para que se entienda que ese tiempo no es todo a mano.
 - `evidencia`: no lo completes. En la planilla, la Evidencia de cada fila es siempre
   el link del PDF del informe subido (Fase 6).
-- `hoy`, `por_que`, `como_automatizar` van en el cuerpo del informe; `hallazgo` y
-  `como_corto` son las versiones cortas (una oración) para la fila de la planilla.
+- `hoy`, `por_que`, `como_automatizar` van en el cuerpo del informe; `unidad`,
+  `hallazgo` y `como_corto` son la fila de la planilla, que coordinación lee sin el
+  informe al lado. Por eso cada fila tiene que entenderse sola:
+  - `unidad`: **el momento o el área** donde pasa ("Todo el cuatrimestre", "Inicio
+    del cuatrimestre", "Entregas de cada unidad", "Segundo parcial", "Foro de la
+    comisión", "Corrección de trabajos prácticos"). No repitas el título de la tarea.
+  - `hallazgo`: **el problema de intervención del tutor**, en una o dos oraciones:
+    qué tiene que hacer él, cuántas veces o con cuántos alumnos, y qué pasa si no lo
+    hace o por qué le lleva tiempo. **No describas la herramienta** ("la skill lista
+    tal cosa"): lo que cubre la herramienta va en el porqué del estado. Mal: "La
+    skill lista quién adeuda, pero cada recordatorio se escribe por separado". Bien:
+    "El seguimiento de las entregas adeudadas depende de que el tutor le escriba a
+    cada alumno con lo que le falta; si no lo hace a tiempo, parte de las entregas
+    no se concreta".
+  - `como_corto`: la propuesta **concreta y completa**, no una frase de cinco
+    palabras: qué se automatiza, cuándo se dispara, con qué datos y qué le queda al
+    tutor. Si el informe la desarrolla, sumá "Ver la tarea X del informe".
+  - **No repitas hallazgos.** Si dos tareas describen el mismo problema, juntalas o
+    diferencialas por el problema, no por la herramienta.
+  - **No contradigas los hechos:** si un dato ya sale del aula (las fechas, por
+    ejemplo), no digas que se arma a mano; decí qué parte sigue a mano.
 - `estado_motivo` y `falta`: completalos en todas las tareas. El informe los muestra
   juntos en la línea del estado ("Parcial. <motivo>. Falta: <falta>.").
   - `estado_motivo`: qué cubre la herramienta y qué sigue haciendo el tutor (en
@@ -92,7 +111,10 @@ Cada tarea responde estas siete cosas, y nada más:
 6. Cómo se podría automatizar (`automatizable`, `como_automatizar`).
 7. Qué prioridad tiene (`prioridad`).
 
-En "Cómo se relevó" van solo los datos del aula que se usan en alguna tarea. **Si una
+En "Cómo se relevó" va solo el método: qué se repasó y con qué. **No van datos de la
+comisión** (cantidad de alumnos, alumnos sin entrar, entregas por corregir, mensajes
+pendientes, cantidad de tareas o de entregas): son una foto de un día, cambian y no
+describen el trabajo del tutor. Tampoco en las tareas ni en los hallazgos. **Si una
 frase o un dato no responde a ninguna de esas preguntas, o no salió del tutor ni de una
 tool que lo confirme, no va.** Antes de mostrar el borrador, pasá cada dato del
 relevamiento y cada frase de las tareas por esta regla.
@@ -120,9 +142,13 @@ borrador:
 ## Reglas de redacción
 
 - Español rioplatense, voseo, oraciones cortas y directas.
-- En "Qué se hace hoy" decí siempre qué resuelve ya la herramienta y qué sigue
-  necesitando la intervención del tutor. No describas como "todo a mano" algo que el
-  tutor hace con la skill.
+- **En cada tarea el protagonista es el tutor y lo que hace**, no la herramienta. Qué
+  es intervención y qué herramientas usa ya está explicado al inicio del informe
+  (sección 2 y la tabla de herramientas), y el `con_que` va junto al tiempo. En "Qué
+  se hace hoy", en el porqué del estado y en el hallazgo, decí qué parte ya sale sola
+  en pocas palabras ("la lista de quién adeuda ya sale sola") y contá lo que hace el
+  tutor; no repitas "la skill lista…", "la skill publica…". No describas como "todo a
+  mano" algo que ya sale solo.
 - En la conclusión mencioná el tiempo total por semana y cuánto representan las
   tareas de prioridad alta: es el argumento para automatizar. **No lo calcules vos:**
   corré antes `render_informe.py informe.json --solo-html`, que imprime los totales, y

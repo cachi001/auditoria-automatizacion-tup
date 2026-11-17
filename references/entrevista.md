@@ -45,8 +45,11 @@ Si una tool marca un resultado como **no verificable** (por ejemplo, `auditar_au
 con links de NotebookLM, Colab o YouTube que "caen en login" sin sesión), eso no es
 un hallazgo: no lo pongas en el informe como un problema del aula.
 
-Usá del campus solo **cantidades y hechos del aula** (cantidad de tareas, de avisos,
-de links rotos). Nunca pongas nombres de alumnos en el informe. Ojo: `demora_correccion`
+Los datos del campus sirven para **armar las opciones de la entrevista**, no para el
+informe: cuántos alumnos no entran hoy, cuántas entregas faltan corregir o cuántos
+mensajes hay son una foto de la comisión en un día, cambian y pueden estar
+desactualizados. El informe habla del trabajo que se repite. Nunca pongas nombres de
+alumnos en el informe. Ojo: `demora_correccion`
 devuelve todas las comisiones del curso con el nombre de cada tutor; usá solo las filas
 de las comisiones del tutor que estás entrevistando. Y `mi_comision` puede devolver una
 sola comisión aunque tenga más (pasó en Programación 1): confirmá siempre con el tutor.

@@ -74,7 +74,7 @@
    "como_automatizar": "Detectar antes de corregir las reentregas y los archivos que la herramienta no acepta, controlar automáticamente la duración del video y avisar cuáles necesitan revisión del tutor.",
    "unidad": "Trabajo Práctico Integrador",
    "hallazgo": "La skill corrige con Active-IA y carga la nota; los videos y los casos especiales se revisan a mano.",
-   "automatizable": "A evaluar",
+   "automatizable": "Sí",
    "como_corto": "Detectar antes de corregir los casos especiales y controlar la duración del video.",
    "estado": "Parcial",
    "estado_motivo": "Active-IA corrige y la skill carga la nota y la devolución; mirar los videos y resolver los casos especiales sigue a cargo del tutor.",

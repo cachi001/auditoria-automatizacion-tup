@@ -36,11 +36,11 @@ La columna G tiene una fórmula que cuenta sola los hallazgos: **no escribas en 
 
 | A | B | C | D | E | F | G | H | I |
 |---|---|---|---|---|---|---|---|---|
-| Fecha | Nombre y apellido | Tarea | Hallazgo | Tiempo por semana | Prioridad | ¿Automatizable? | Cómo se podría automatizar | Estado |
+| Fecha | Nombre y apellido | Unidad o actividad | Hallazgo | Evidencia (link) | Prioridad | ¿Automatizable? | Cómo se podría automatizar | Estado |
 
-Del JSON salen así: `fecha`, `nombre`, `titulo` (la tarea), `hallazgo`, el tiempo con
-la herramienta (`tiempo_semanal` y `con_que` juntos, como en el PDF: "1 a 3 horas, con
-la skill TUP Campus Navigator."), prioridad (`Alta`/`Media`/`Baja`, con mayúscula), `automatizable`, `como_corto`,
+Del JSON salen así: `fecha`, `nombre`, `unidad`, `hallazgo`, evidencia (el
+`evidencia` de la tarea si el tutor pasó un link real; si no, el link del PDF subido),
+prioridad (`Alta`/`Media`/`Baja`, con mayúscula), `automatizable`, `como_corto`,
 `estado`. El nombre de la columna B se elige de una lista armada con la pestaña
 Personas, así que **Personas va primero** y el nombre tiene que ser idéntico.
 

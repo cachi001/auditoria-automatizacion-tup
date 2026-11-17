@@ -202,7 +202,7 @@ def armar_html(d: dict) -> str:
                  "\"Sí\" en \"¿Subió el informe?\" y pegá el link. 4. Cargá cada tarea como una fila en la pestaña Hallazgos.</div>")
     o.append(f"<div class='apaisada'><h2><span class='num'>{next(n)}</span>Cómo se cargan en la pestaña Hallazgos</h2>"
              f"<p>Cada tarea de la sección {n_tareas} es una fila en la pestaña Hallazgos {e(materia)}. Las columnas son las mismas que en "
-             "la planilla. En Evidencia va el link a este informe, o a una planilla o mensaje que muestre la tarea si el tutor lo tiene.</p>"
+             "la planilla. En Evidencia va el link a este informe.</p>"
              "<p class='leyenda'>Prioridad: Alta, Media o Baja. ¿Automatizable?: Sí, No o A evaluar. Estado: Pendiente (ninguna "
              "herramienta la cubre), Parcial (una herramienta hace una parte y el tutor el resto) o Cubierta (ya no necesita al tutor).</p>"
              "<table class='planilla'><colgroup><col style='width:7%'><col style='width:8%'>"

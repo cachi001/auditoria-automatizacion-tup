@@ -66,14 +66,16 @@ def total_texto(tareas) -> str:
     mins, maxs, abierto = 0.0, 0.0, False
     for t in tareas:
         r = rango_horas(str(t.get("tiempo_semanal", "")))
-        if r is None:
-            return None
+        if r is None:  # tareas por instancia u ocasionales: no se suman al total semanal
+            continue
         lo, hi = r
         mins += lo
         if hi is None:
             abierto = True
         else:
             maxs += hi
+    if not any(rango_horas(str(t.get("tiempo_semanal", ""))) for t in tareas):
+        return None
     if abierto:
         return f"más de {fmt_h(mins)} por semana"
     if mins == maxs:
@@ -175,6 +177,9 @@ def armar_html(d: dict) -> str:
             tot_a = total_texto(alta)
             if alta and len(alta) < len(d["tareas"]) and tot_a:
                 o.append(f"<tr class='total'><td colspan='4'>Solo tareas de prioridad alta</td><td>{e(tot_a)}</td></tr>")
+            fuera = [x["titulo"] for x in d["tareas"] if str(x.get("tiempo_semanal", "")).strip() and rango_horas(str(x["tiempo_semanal"])) is None]
+            if fuera:
+                o.append(f"<tr class='total'><td colspan='4'>No suman al total semanal (su tiempo es por instancia): {e('; '.join(fuera))}</td><td></td></tr>")
     o.append("</table>")
 
     for pr in PRIORIDADES:

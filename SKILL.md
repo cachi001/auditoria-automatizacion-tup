@@ -104,7 +104,7 @@ abrume:
 |---|---|
 | 1. Seguimiento | Alumnos atrasados y alumnos que no entran al aula |
 | 2. Comunicación | Mensajes privados, consultas de foro y avisos |
-| 3. Corrección y evaluación | Correcciones, integradores, parciales, coloquios |
+| 3. Corrección y evaluación | Correcciones, integradores, parciales, orales, y lo que el tutor arma para tomarlos (turnos, planillas), aunque sea con IA |
 | 4. Informes y material | Informes para coordinación y revisión del material del aula |
 | 5. Algo más | "¿Hay algo más que hagas seguido y te lleve tiempo?" |
 

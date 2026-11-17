@@ -13,6 +13,10 @@ Todo lo que necesita la intervención del tutor, **aunque use la skill**. Ejempl
 - Redactar y publicar avisos en el foro, aunque la skill los publique.
 - Revisar una corrección hecha con Active-IA antes de publicarla.
 - Ver quién no entra al aula y avisarle.
+- Reescribir o completar el comentario de devolución que propone Active-IA.
+- Armar con IA una planilla o un formulario para una evaluación (por ejemplo, los
+  turnos de un oral con lo que adeuda cada alumno y si rindió el parcial) y cargar
+  los datos: la IA ayudó, pero lo hizo el tutor.
 
 Lo que NO es manual: lo que pasa solo, sin que el tutor haga nada (por ejemplo, un
 cuestionario que se corrige solo). Explicale esto al tutor al empezar, porque la
@@ -24,12 +28,12 @@ tendencia es decir "eso ya lo hace la skill" y dejarlo afuera.
 |---|---|---|
 | Datos del tutor | `mi_comision(nombre)` (si no lo encuentra: `aulas` + `descubrir_comisiones`) | Rol. Confirmá materia y comisiones. |
 | Actividades | `listar_tareas(course_id)`: cuántas tareas hay y de qué tipo (cierres, prácticas, integradores, parciales) | Cuáles le llevan más tiempo y por qué. |
-| Seguimiento de atrasados | `alumnos_en_riesgo`, `entregas_tarea`, `sumario` | Cómo les avisa lo que adeudan, cada cuánto, cuánto le lleva. |
-| Alumnos que no entran | `sin_entrar_al_aula` | Cómo los contacta y cada cuánto. Recomendá prioridad alta: un alumno que deja de entrar suele no volver si nadie lo contacta. |
-| Mensajes y consultas | `mensajes_pendientes(limite=300)`, `foros_pendientes`: cuántos hay y de qué temas son | Qué consultas se repiten (opciones armadas con los temas que viste). |
-| Corrección | `pendientes_por_corregir`, `demora_correccion`, `activeia_pendientes` | Cómo corrige, con qué herramienta, qué revisa a mano, casos especiales. |
-| Evaluación | `listar_tareas` (parciales, recuperatorios) | Cómo son los parciales: cuestionario, entrega de código, coloquio, turnos. |
-| Avisos | `listar_foros(course_id)`: cuántos avisos tiene el foro de la comisión | Qué avisos publica, cada cuánto, cómo controla las fechas. |
+| Seguimiento de atrasados | `alumnos_en_riesgo`, `entregas_tarea`, `sumario` | Cómo les avisa lo que adeudan, cada cuánto, cuánto le lleva. Si sigue las reentregas de las entregas desaprobadas. |
+| Alumnos que no entran | `sin_entrar_al_aula` | Cómo los contacta y cada cuánto. Si lo deriva al Tutor Nexo. Recomendá prioridad alta: un alumno que deja de entrar suele no volver si nadie lo contacta. |
+| Mensajes y consultas | `mensajes_pendientes(limite=300)`, `foros_pendientes`: cuántos hay y de qué temas son | Qué consultas se repiten (opciones armadas con los temas que viste). Si al inicio responde una por una lo mismo (tutor, comisión, entregas, fechas) o manda una bienvenida. Si los alumnos le preguntan uno por uno qué les falta o si pueden rendir. |
+| Corrección | `pendientes_por_corregir`, `demora_correccion`, `activeia_pendientes` | Cómo corrige, con qué herramienta, qué revisa a mano, casos especiales. Si reescribe el comentario de devolución de Active-IA. |
+| Evaluación | `listar_tareas` (parciales, recuperatorios) | Cómo son los parciales: cuestionario, entrega de código, oral, turnos. Si arma él algo para tomarlos (planilla de turnos, datos de cada alumno), aunque sea con IA. |
+| Avisos | `listar_foros(course_id)`: cuántos avisos tiene el foro de la comisión | Qué avisos publica, cada cuánto, cómo controla las fechas. Si manda recordatorios de fechas por mensaje privado. |
 | Informes | No hay dato en el campus | Qué informes arma, para quién, cada cuánto. |
 | Material del aula | `auditar_aula(course_id, unidad=N)` o el aula entera | Si revisa apuntes, videos o código de ejemplo, y cómo. |
 | Otras tareas | No hay dato en el campus | "¿Hay algo más que hagas seguido y te lleve tiempo?" |

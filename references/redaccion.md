@@ -51,8 +51,9 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
 - `tiempo_semanal`: el tiempo que el tutor interviene por semana en esa tarea. Usá una
   de las opciones (`Menos de 1 hora`, `1 a 3 horas`, `3 a 6 horas`, `Más de 6 horas`)
   o un número que haya dicho el tutor (`2 horas`). El script arma con esto la tabla de
-  resumen y el total; si una tarea no es semanal, estimá con el tutor cuánto le lleva
-  en promedio por semana.
+  resumen y el total. Si una tarea no es semanal (un oral, una mesa de examen), no la
+  promedies ni la conviertas a horas por semana: preguntale cuánto le lleva cada vez y
+  poné `Por instancia: N horas`. El informe la muestra y no la suma al total semanal.
 - `con_que`: cómo hace hoy la tarea, según lo que respondió ("con la skill TUP Campus
   Navigator", "a mano en Moodle", "con Active-IA y revisión del tutor"). El informe lo
   muestra junto al tiempo, para que se entienda que ese tiempo no es todo a mano.

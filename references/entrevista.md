@@ -86,7 +86,7 @@ valores exactos que acepta la planilla.
 | ¿Esta tarea te lleva tiempo? (por cada área) | Interactiva | Sí, mucho · Algo · Casi nada · No la hago |
 | Cómo la hace hoy: qué resuelve la skill (o Active-IA) y qué hace él | Interactiva, escenarios armados con el aula | Ej.: La skill arma la lista y yo escribo cada mensaje · La skill arma y envía, yo reviso · A mano en Moodle (ver el modelo abajo) |
 | Frecuencia y tiempo de intervención (juntos, una pregunta) | Interactiva | Ej.: Diaria, mucho tiempo · Diaria, algo de tiempo · Picos en parciales · Semanal (ver el modelo abajo) |
-| Prioridad y estado (juntos) | Interactiva, tu propuesta primero con "(Recomendado)" y el porqué | Ej.: Alta / En curso · Alta / Pendiente · Media / En curso |
+| Prioridad y estado (juntos) | Interactiva, tu propuesta primero con "(Recomendado)" y el porqué | Ej.: Alta / Parcial · Alta / Pendiente · Media / Parcial |
 | Temas o casos de cada área | Interactiva, selección múltiple, armada con lo que viste en el aula | Ej.: Parciales y recuperatorios · TPI y video · Notas y condición · Inicio de cursada |
 | ¿Se puede automatizar? | Interactiva | Sí · No · A evaluar |
 | Qué hace hoy, por qué lleva tiempo, idea de automatización | Lo redactás vos con sus respuestas y se lo mostrás en el borrador | No lleva opciones |
@@ -127,20 +127,21 @@ tutor puede ver solo el cuadro de la pregunta.
 - **Proponé prioridad y estado juntos**, con tu recomendación primero y el porqué:
 
   > Para la tarea "Seguimiento de atrasados y alumnos que no entran" (Prog I) propongo
-  > prioridad Alta y estado En curso (la skill ya te arma la lista, pero vos escribís
+  > prioridad Alta y estado Parcial (la skill ya te arma la lista, pero vos escribís
   > cada mensaje). ¿Confirmás?
-  > 1. Alta / En curso (Recomendado): la skill detecta, vos redactás y enviás
+  > 1. Alta / Parcial (Recomendado): la skill detecta, vos redactás y enviás
   > 2. Alta / Pendiente: todo es a mano
-  > 3. Media / En curso: frecuente pero acotada
+  > 3. Media / Parcial: frecuente pero acotada
 
   Criterios: **Alta** consume mucho tiempo todas las semanas o afecta a toda la
   comisión; **Media** es frecuente pero acotada; **Baja** es ocasional o ya tiene una
-  solución parcial. **Pendiente**: toda la tarea depende del tutor; **En curso**: una
-  herramienta ya resuelve una parte; **Resuelto**: ya no necesita su intervención. Lo
+  solución parcial. **Pendiente**: ninguna herramienta la cubre, todo depende del tutor;
+  **Parcial**: una herramienta hace una parte y el tutor el resto; **Cubierta**: ya no
+  necesita su intervención. Lo
   que elija el tutor es lo que va.
 
-  El porqué que das en la pregunta se guarda como **motivo del estado**
-  (`estado_motivo`), y sumá **qué falta** para resolverla (`falta`). Ejemplo: motivo
+  El porqué que das en la pregunta se guarda como **qué cubre la herramienta y
+  qué hace el tutor** (`estado_motivo`), y sumá **qué falta** para resolverla (`falta`). Ejemplo:
   "La skill ya arma la lista de quién adeuda; escribir y enviar cada mensaje sigue a
   cargo del tutor"; qué falta "que redactar y enviar cada recordatorio no dependa del
   tutor" (la solución concreta va aparte, en "cómo automatizar").

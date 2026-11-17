@@ -27,7 +27,9 @@ e = html.escape
 PRIORIDADES = ("alta", "media", "baja")
 NOMBRE_PR = {"alta": "Alta", "media": "Media", "baja": "Baja"}
 AUTOMATIZABLE = {"Sí", "No", "A evaluar"}
-ESTADOS = {"Pendiente", "En curso", "Resuelto"}
+ESTADOS = {"Pendiente", "Parcial", "Cubierta"}
+# Nombres anteriores, aceptados para no romper JSON ya armados.
+ESTADOS_VIEJOS = {"En curso": "Parcial", "Resuelto": "Cubierta"}
 CAMPOS_TAREA = ("prioridad", "titulo", "hoy", "frecuencia", "por_que", "como_automatizar",
                 "unidad", "hallazgo", "automatizable", "como_corto", "estado")
 # Opcionales: tiempo_semanal, con_que, estado_motivo, falta, evidencia (solo links reales).
@@ -98,6 +100,7 @@ def validar(d: dict) -> list[str]:
         if not d.get(k):
             errs.append(f"Falta el campo '{k}' o está vacío.")
     for i, t in enumerate(d.get("tareas", []), 1):
+        t["estado"] = ESTADOS_VIEJOS.get(t.get("estado"), t.get("estado"))
         for k in CAMPOS_TAREA:
             if not str(t.get(k, "")).strip():
                 errs.append(f"Tarea {i}: falta '{k}' (ninguna celda puede quedar vacía).")
@@ -106,7 +109,7 @@ def validar(d: dict) -> list[str]:
         if t.get("automatizable") not in AUTOMATIZABLE:
             errs.append(f"Tarea {i}: automatizable debe ser Sí, No o A evaluar.")
         if t.get("estado") not in ESTADOS:
-            errs.append(f"Tarea {i}: estado debe ser Pendiente, En curso o Resuelto.")
+            errs.append(f"Tarea {i}: estado debe ser Pendiente, Parcial o Cubierta.")
     return errs
 
 
@@ -136,9 +139,9 @@ def armar_html(d: dict) -> str:
              "consultar, revisar, decidir, escribir o enviar algo.</p>"
              "<p>Lo que una herramienta resuelve sola, sin que el tutor intervenga, no se cuenta como intervención. Por eso, en "
              "cada tarea se indica qué resuelve ya cada herramienta y qué sigue necesitando al tutor.</p>"
-             "<p class='leyenda'><b>Estado de cada tarea.</b> Pendiente: toda la tarea depende del tutor; ninguna herramienta "
-             "resuelve una parte. En curso: una herramienta ya resuelve una parte, pero otra sigue necesitando la intervención "
-             "del tutor. Resuelto: la tarea ya no necesita la intervención del tutor.</p>")
+             "<p class='leyenda'><b>Estado de cada tarea: cuánto la cubren las herramientas.</b> Pendiente: ninguna herramienta la cubre; toda la "
+             "tarea depende del tutor. Parcial: una herramienta hace una parte y el tutor hace el resto. Cubierta: la tarea ya no "
+             "necesita la intervención del tutor.</p>")
     herr = d.get("herramientas") or []
     if herr:
         o.append("<h3 class='sub'>Herramientas que usa el tutor</h3><table class='planilla resumen'><colgroup>"
@@ -200,8 +203,8 @@ def armar_html(d: dict) -> str:
     o.append(f"<div class='apaisada'><h2><span class='num'>{next(n)}</span>Cómo se cargan en la pestaña Hallazgos</h2>"
              f"<p>Cada tarea de la sección {n_tareas} es una fila en la pestaña Hallazgos {e(materia)}. Las columnas son las mismas que en "
              "la planilla. En Evidencia va el link a este informe, o a una planilla o mensaje que muestre la tarea si el tutor lo tiene.</p>"
-             "<p class='leyenda'>Prioridad: Alta, Media o Baja. ¿Automatizable?: Sí, No o A evaluar. Estado: Pendiente (toda la tarea "
-             "depende del tutor), En curso (una herramienta ya resuelve una parte) o Resuelto (ya no necesita al tutor).</p>"
+             "<p class='leyenda'>Prioridad: Alta, Media o Baja. ¿Automatizable?: Sí, No o A evaluar. Estado: Pendiente (ninguna "
+             "herramienta la cubre), Parcial (una herramienta hace una parte y el tutor el resto) o Cubierta (ya no necesita al tutor).</p>"
              "<table class='planilla'><colgroup><col style='width:8%'><col style='width:9%'><col style='width:6.5%'>"
              "<col style='width:9.5%'><col style='width:18%'><col style='width:11%'><col style='width:6.5%'><col style='width:9.5%'>"
              "<col style='width:15%'><col style='width:7%'></colgroup><tr><th>Fecha</th><th>Nombre y apellido</th><th>Comisión</th>"

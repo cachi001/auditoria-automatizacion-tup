@@ -30,7 +30,7 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
       "hallazgo": "La skill lista quién no entra al aula; los avisos se envían uno por uno.",
       "automatizable": "Sí",
       "como_corto": "Aviso automático con plantilla según los días sin ingresar.",
-      "estado": "En curso",
+      "estado": "Parcial",
       "estado_motivo": "La skill ya arma la lista de quién no entra; avisarles sigue a cargo del tutor.",
       "falta": "que avisarle a cada alumno no dependa del tutor."
     }
@@ -45,7 +45,9 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
 ```
 
 - `prioridad`: `alta`, `media` o `baja`. `automatizable`: `Sí`, `No` o `A evaluar`.
-  `estado`: `Pendiente`, `En curso` o `Resuelto`. El script rechaza otros valores.
+  `estado`: `Pendiente`, `Parcial` o `Cubierta`: cuánto cubren hoy las herramientas la
+  tarea. El script rechaza otros valores (acepta los nombres viejos `En curso` y
+  `Resuelto` y los pasa a `Parcial` y `Cubierta`).
 - `tiempo_semanal`: el tiempo que el tutor interviene por semana en esa tarea. Usá una
   de las opciones (`Menos de 1 hora`, `1 a 3 horas`, `3 a 6 horas`, `Más de 6 horas`)
   o un número que haya dicho el tutor (`2 horas`). El script arma con esto la tabla de
@@ -60,9 +62,9 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
 - `hoy`, `por_que`, `como_automatizar` van en el cuerpo del informe; `hallazgo` y
   `como_corto` son las versiones cortas (una oración) para la fila de la planilla.
 - `estado_motivo` y `falta`: completalos en todas las tareas. El informe los muestra
-  juntos en la línea del estado ("En curso. <motivo>. Falta: <falta>.").
-  - `estado_motivo`: por qué está en ese estado, diciendo qué resuelve ya la
-    herramienta y qué sigue a cargo del tutor.
+  juntos en la línea del estado ("Parcial. <motivo>. Falta: <falta>.").
+  - `estado_motivo`: qué cubre la herramienta y qué sigue haciendo el tutor (en
+    Pendiente, que ninguna herramienta cubre la tarea y por qué).
   - `falta`: qué parte todavía no está resuelta para que la tarea deje de necesitar
     al tutor, dicho como necesidad ("que el envío de cada aviso no dependa del
     tutor"). **No repitas la solución**: la propuesta concreta va en

@@ -128,11 +128,13 @@ Por cada bloque:
    a partir de sus respuestas y de lo que viste en el aula. No le pidas que lo escriba.
 5. **Proponé prioridad y estado** en una sola pregunta, con tu propuesta primero y
    "(Recomendado)", y una línea con el porqué. Ejemplo: "Para 'Seguimiento de
-   atrasados' propongo Alta / En curso: la skill te arma la lista, pero vos escribís
+   atrasados' propongo Alta / Parcial: la skill te arma la lista, pero vos escribís
    cada mensaje. ¿Confirmás?". Lo que elija el tutor es lo que va.
-   **Ese porqué es el motivo del estado** (`estado_motivo`), y agregá **qué falta**
-   para resolver la tarea (`falta`): el informe los muestra en la línea del estado,
-   porque un estado sin explicación no le dice nada a quien lo lee.
+   El estado dice **cuánto cubren hoy las herramientas la tarea**: Pendiente (ninguna
+   la cubre), Parcial (una hace una parte y el tutor el resto) o Cubierta (ya no
+   necesita al tutor). **Ese porqué dice qué cubre la herramienta y qué sigue haciendo
+   el tutor** (`estado_motivo`), y agregá **qué falta** para cubrirla del todo
+   (`falta`): el informe los muestra en la línea del estado.
 6. Si dice que un área no la hace o no le lleva tiempo, pasá a la siguiente. Si un
    bloque tiene dos tareas que llevan tiempo, la prioridad de la segunda (o su "cómo
    la hacés") puede ir en la tanda del bloque siguiente, para no pasar de 4 preguntas.

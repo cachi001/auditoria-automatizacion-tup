@@ -38,8 +38,8 @@ La columna G tiene una fórmula que cuenta sola los hallazgos: **no escribas en 
 |---|---|---|---|---|---|---|---|---|
 | Fecha | Nombre y apellido | Unidad o actividad | Hallazgo | Evidencia (link) | Prioridad | ¿Automatizable? | Cómo se podría automatizar | Estado |
 
-Del JSON salen así: `fecha`, `nombre`, `unidad`, `hallazgo`, evidencia (el
-`evidencia` de la tarea si el tutor pasó un link real; si no, el link del PDF subido),
+Del JSON salen así: `fecha`, `nombre`, `unidad`, `hallazgo`, evidencia (siempre
+el link del PDF del informe subido a Informes),
 prioridad (`Alta`/`Media`/`Baja`, con mayúscula), `automatizable`, `como_corto`,
 `estado`. El nombre de la columna B se elige de una lista armada con la pestaña
 Personas, así que **Personas va primero** y el nombre tiene que ser idéntico.

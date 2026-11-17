@@ -56,9 +56,8 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
 - `con_que`: cómo hace hoy la tarea, según lo que respondió ("con la skill TUP Campus
   Navigator", "a mano en Moodle", "con Active-IA y revisión del tutor"). El informe lo
   muestra junto al tiempo, para que se entienda que ese tiempo no es todo a mano.
-- `evidencia`: opcional, y **solo un link real** que te haya pasado el tutor. Nunca
-  pongas textos de ejemplo como "Link a captura". Si no hay, dejalo afuera: en la
-  planilla va el link del PDF subido (Fase 6).
+- `evidencia`: no lo completes. En la planilla, la Evidencia de cada fila es siempre
+  el link del PDF del informe subido (Fase 6).
 - `hoy`, `por_que`, `como_automatizar` van en el cuerpo del informe; `hallazgo` y
   `como_corto` son las versiones cortas (una oración) para la fila de la planilla.
 - `estado_motivo` y `falta`: completalos en todas las tareas. El informe los muestra

@@ -205,13 +205,13 @@ def armar_html(d: dict) -> str:
              "la planilla. En Evidencia va el link a este informe, o a una planilla o mensaje que muestre la tarea si el tutor lo tiene.</p>"
              "<p class='leyenda'>Prioridad: Alta, Media o Baja. ¿Automatizable?: Sí, No o A evaluar. Estado: Pendiente (ninguna "
              "herramienta la cubre), Parcial (una herramienta hace una parte y el tutor el resto) o Cubierta (ya no necesita al tutor).</p>"
-             "<table class='planilla'><colgroup><col style='width:8%'><col style='width:9%'><col style='width:6.5%'>"
-             "<col style='width:9.5%'><col style='width:18%'><col style='width:11%'><col style='width:6.5%'><col style='width:9.5%'>"
-             "<col style='width:15%'><col style='width:7%'></colgroup><tr><th>Fecha</th><th>Nombre y apellido</th><th>Comisión</th>"
+             "<table class='planilla'><colgroup><col style='width:8%'><col style='width:10%'>"
+             "<col style='width:11%'><col style='width:21%'><col style='width:11%'><col style='width:6.5%'><col style='width:9.5%'>"
+             "<col style='width:15%'><col style='width:8%'></colgroup><tr><th>Fecha</th><th>Nombre y apellido</th>"
              "<th>Unidad o actividad</th><th>Hallazgo</th><th>Evidencia (link)</th><th>Prioridad</th><th>¿Automatizable?</th>"
              "<th>Cómo se podría automatizar</th><th>Estado</th></tr>")
     for t in d["tareas"]:
-        o.append(f"<tr><td class='nw'>{e(d['fecha'])}</td><td>{e(d['nombre'])}</td><td class='nw'>{e(com)}</td><td>{e(t['unidad'])}</td>"
+        o.append(f"<tr><td class='nw'>{e(d['fecha'])}</td><td>{e(d['nombre'])}</td><td>{e(t['unidad'])}</td>"
                  f"<td>{e(t['hallazgo'])}</td><td>{e(str(t.get('evidencia') or '').strip() or 'Link a este informe')}</td><td>{NOMBRE_PR[t['prioridad']]}</td>"
                  f"<td>{e(t['automatizable'])}</td><td>{e(t['como_corto'])}</td><td>{e(t['estado'])}</td></tr>")
     o.append("</table></div></body></html>")

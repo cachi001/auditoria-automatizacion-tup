@@ -108,7 +108,7 @@
    "como_automatizar": "Acordar el formato con coordinación y que la skill genere el informe directamente en ese formato.",
    "unidad": "Informes a coordinación",
    "hallazgo": "La skill genera el informe; el formato se ajusta a mano a cada pedido.",
-   "automatizable": "Sí",
+   "automatizable": "A evaluar",
    "como_corto": "Formato fijo acordado con coordinación.",
    "estado": "Parcial",
    "estado_motivo": "La skill genera el informe con los datos del aula; ajustar el formato a cada pedido sigue a cargo del tutor.",

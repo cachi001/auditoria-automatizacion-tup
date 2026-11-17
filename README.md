@@ -18,16 +18,16 @@ corrección de Active-IA, escribir cada aviso), para pensar cómo automatizarlas
 1. **Te ubica:** con tu nombre encuentra tus materias y comisiones, y te las confirma.
 2. **Revisa tu aula** en el campus, sin modificar nada: tareas, mensajes y foros sin
    responder, alumnos que no entran, correcciones pendientes.
-3. **Te entrevista en 5 bloques:** seguimiento, comunicación, corrección y evaluación,
-   informes y material, y "algo más". Las preguntas vienen con opciones armadas con lo
-   que vio en tu aula: respondés con clics. Te propone la prioridad de cada tarea y vos
+3. **Te propone y vos confirmás:** con lo que vio en tu aula te propone qué tareas
+   hacés, cómo las hacés y cuánto te llevan, y respondés con clics. Si algo es
+   distinto en tu caso, lo agregás. Te propone la prioridad de cada tarea y vos
    decidís.
 4. **Te muestra el borrador** y espera tu OK.
 5. **Genera el PDF** con el estilo de la cátedra.
 6. **Carga todo con tu OK:** sube el PDF a la carpeta Informes de tu materia y completa
    tu fila en la pestaña Personas y tus tareas en la pestaña Hallazgos.
 
-La entrevista lleva unos 6 a 8 minutos por materia. Si estás en varias materias, se
+La entrevista lleva unos 3 minutos por materia: la skill propone y vos confirmás. Si estás en varias materias, se
 hace un informe por cada una.
 
 ## Antes de empezar

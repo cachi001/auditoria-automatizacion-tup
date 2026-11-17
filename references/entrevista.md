@@ -105,8 +105,16 @@ tutor puede ver solo el cuadro de la pregunta.
 
 ### Guiar sin abrumar
 
-- **Una tanda de preguntas por bloque** (los 5 bloques del SKILL.md), hasta 4 juntas.
-  El tutor responde con clics.
+- **Las rondas son las del SKILL.md: 4, unos 3 minutos.** Vos proponés y el tutor
+  confirma con un clic. Esta tabla y los ejemplos son el repertorio para armar las
+  opciones, no una lista para recorrer entera: preguntá solo lo que no podés deducir.
+- **Cómo y cuánto, en una sola opción por tarea**, con tu propuesta primero:
+
+  > Seguimiento de atrasados (Prog I): ¿cómo lo hacés y cuánto te lleva?
+  > 1. La skill te arma la lista y vos escribís cada mensaje; semanal, 1 a 3 horas (Recomendado)
+  > 2. Igual, pero menos de 1 hora por semana
+  > 3. La skill arma y envía los mensajes, vos solo revisás; menos de 1 hora
+  > 4. Lo revisás a mano en Moodle y escribís cada mensaje; 1 a 3 horas
 - **Armá las opciones con el relevamiento.** Así se ve una buena pregunta:
 
   > Mensajes y consultas (Prog I): hoy tenés 3 mensajes esperando respuesta y las

@@ -67,11 +67,11 @@ entrevista sin datos del aula.
 3. Pedile su nombre y usá `mi_comision(nombre)` de `tup-campus-navigator` para obtener
    materias y comisiones. Confirmá con él. Si está en varias materias, avisale que se
    hace un informe por materia y preguntale por cuál empiezan.
-4. Con una pregunta interactiva, preguntale su rol (Tutor, Profesor, Coordinador) y
-   qué herramientas usa (selección múltiple: la skill del campus, Active-IA,
-   planillas propias, otras). Por cada herramienta que marque, redactá vos qué le
-   resuelve y qué sigue necesitándolo, y confirmalo con él: va en la tabla
-   "Herramientas que usa el tutor" del informe.
+4. En la misma pregunta interactiva confirmá todo junto, con tu propuesta primero y
+   "(Recomendado)": materia, comisiones, rol y herramientas que usa ("Tutor de
+   Programación 1, comisiones 10 y 15; usás la skill del campus y Active-IA
+   (Recomendado)"). Por cada herramienta, redactá vos qué le resuelve y qué sigue
+   necesitándolo: va en la tabla "Herramientas que usa el tutor" del informe.
 
 Si `tup-campus-navigator` no está disponible, seguí igual: ver "Sin la skill del
 campus" en `references/entrevista.md`.
@@ -90,15 +90,15 @@ de la entrevista: el tutor elige y corrige en vez de contar todo de cero.
 
 ---
 
-## Fase 3: Entrevista guiada, sin abrumar
+## Fase 3: Entrevista guiada, en 3 minutos
 
-Vos guiás: armás las opciones con lo que viste en el aula, proponés la prioridad y
-redactás. El tutor elige, corrige y **tiene la última palabra**. El objetivo es que
-responda rápido, con clics, y no que escriba párrafos.
+Vos guiás: con el relevamiento ya sabés casi todo, así que **proponés y el tutor
+confirma o corrige con un clic**. No es un cuestionario. Es tu propuesta, armada para
+su caso, que él ajusta. Toda la entrevista entra en **4 rondas, unos 3 minutos**
+(más la confirmación de la Fase 1). Si se alarga, lo estás haciendo mal: estás
+preguntando lo que podés deducir.
 
-Agrupá las áreas de `references/entrevista.md` en **5 bloques**, una tanda de preguntas
-por bloque, para que la entrevista dure unas 7 rondas por materia (6 a 8 minutos) y no
-abrume:
+Las tareas se agrupan en 5 bloques, solo para ordenar:
 
 | Bloque | Áreas |
 |---|---|
@@ -106,45 +106,44 @@ abrume:
 | 2. Comunicación | Mensajes privados, consultas de foro y avisos |
 | 3. Corrección y evaluación | Correcciones, integradores, parciales, orales, y lo que el tutor arma para tomarlos (turnos, planillas), aunque sea con IA |
 | 4. Informes y material | Informes para coordinación y revisión del material del aula |
-| 5. Algo más | "¿Hay algo más que hagas seguido y te lleve tiempo?" |
+| 5. Algo más | Lo que hace y no entra en los otros bloques |
 
-Por cada bloque:
+**Cada tutor es distinto.** Las opciones salen de **su** aula y de lo que te cuenta, no
+de una lista fija. Los ejemplos de `references/entrevista.md` (incluido lo que
+relevaron otros tutores) sirven para no olvidarte de nada, pero no son un checklist:
+puede haber tareas que nadie relevó todavía. Siempre dejale lugar para agregar la suya
+("Otro").
 
-1. **Una sola tanda de preguntas interactivas** (hasta 4 juntas), con opciones armadas
-   desde el relevamiento. Ejemplo: "Hoy tenés 3 mensajes esperando respuesta y las
-   preguntas que se ven son del parcial y del video. ¿Qué consultas se te repiten
-   más?", con selección múltiple de los temas que viste.
-2. En la misma tanda preguntá **cómo hace cada tarea**: qué parte le resuelve la
-   skill del campus (o Active-IA) y qué parte sigue haciendo él, aunque sea con la
-   skill. Opciones con escenarios ("La skill me arma la lista y yo redacto y envío
-   cada mensaje" · "La skill arma y envía, yo reviso" · "A mano en Moodle"). Va en
-   `con_que` y es la base del porqué del estado: sin esto, "menos de 1 hora" no dice
-   si es a mano o con la skill.
-3. En la misma tanda preguntá **frecuencia y tiempo de intervención en una sola
-   pregunta**, con opciones que digan las dos cosas ("Diaria, mucho tiempo: todos los
-   días, más de 1 hora"). El tiempo es el dato más importante del informe: es lo que
-   muestra cuánto se ahorraría automatizando.
-4. **Redactá vos** qué hace hoy, por qué le lleva tiempo y cómo se podría automatizar,
-   a partir de sus respuestas y de lo que viste en el aula. No le pidas que lo escriba.
-5. **Proponé prioridad y estado** en una sola pregunta, con tu propuesta primero y
-   "(Recomendado)", y una línea con el porqué. El estado que proponés sale de lo que
-   contestó en "cómo la hacés": no lo vuelvas a decidir de cero. Ejemplo: "Para 'Seguimiento de
-   atrasados' propongo Alta / Parcial: la skill te arma la lista, pero vos escribís
-   cada mensaje. ¿Confirmás?". Lo que elija el tutor es lo que va.
-   El estado dice **cuánto cubren hoy las herramientas la tarea**: Pendiente (ninguna
-   la cubre), Parcial (una hace una parte y el tutor el resto) o Cubierta (ya no
-   necesita al tutor). **Ese porqué dice qué cubre la herramienta y qué sigue haciendo
-   el tutor** (`estado_motivo`), y agregá **qué falta** para cubrirla del todo
-   (`falta`): el informe los muestra en la línea del estado.
-6. Si dice que un área no la hace o no le lleva tiempo, pasá a la siguiente. Si un
-   bloque tiene dos tareas que llevan tiempo, la prioridad de la segunda (o su "cómo
-   la hacés") puede ir en la tanda del bloque siguiente, para no pasar de 4 preguntas.
+1. **Ronda 1: qué tareas hace.** Una pregunta de selección múltiple por bloque (los
+   bloques 1 a 4, juntos en una tanda), con las tareas que viste en su aula como
+   opciones. En "Otro" agrega lo que falte, incluido el bloque 5.
+2. **Rondas 2 y 3: cómo y cuánto, una pregunta por tarea**, hasta 4 por ronda. En
+   una sola opción proponé **cómo la hace y cuánto le lleva, con la frecuencia**, con
+   tu propuesta primero y "(Recomendado)": "Seguimiento de atrasados: la skill te arma
+   la lista y vos escribís cada mensaje; semanal, 1 a 3 horas (Recomendado)". Las
+   otras opciones cambian el cómo ("a mano en Moodle", "la skill también los envía")
+   o el tiempo ("menos de 1 hora", "3 a 6 horas"). Si la tarea no es semanal (un
+   oral, una mesa de examen), la opción dice el tiempo por instancia. Así cada tarea
+   es un clic, y el tiempo queda atado a la herramienta: "menos de 1 hora, con la
+   skill" no es lo mismo que "menos de 1 hora, a mano". Si en "Otro" te cuenta algo
+   distinto (por ejemplo, que además tiene que ir actualizando algo a mano), eso va
+   en el informe tal cual.
+3. **Ronda 4: el borrador** (Fase 4). Ahí van la prioridad y el estado que proponés
+   para cada tarea, con su porqué, y el tutor confirma todo junto o cambia lo que
+   quiera.
 
-En el bloque 5 suelen aparecer las tareas propias de cada materia (coloquios, videos,
-entornos de trabajo). Si el tutor está en varias materias, en la segunda no repitas
-lo que ya contestó igual (herramientas, rol): preguntá solo lo que cambia. Usá **preguntas interactivas** (`AskUserQuestion` en Claude Code; en Codex, ver la
-tabla de arriba); texto libre solo cuando ninguna opción le sirva. Si el tutor deja una
-tanda sin responder, preguntale una sola vez si prefiere seguir otro momento; no
+**Lo demás lo redactás vos**, sin preguntar: qué hace hoy, por qué le lleva tiempo, el
+estado y su porqué, qué falta, si se puede automatizar y cómo (criterios en
+`references/redaccion.md`). El estado sale de cómo hace la tarea: **Pendiente**
+(ninguna herramienta la cubre), **Parcial** (una hace una parte y el tutor el resto)
+o **Cubierta** (ya no necesita al tutor). El porqué dice qué cubre la herramienta y
+qué sigue haciendo el tutor (`estado_motivo`), y `falta` es la pieza concreta que
+falta.
+
+Si el tutor está en varias materias, en la segunda proponé lo que contestó en la
+primera y preguntá solo lo que cambia. Usá **preguntas interactivas**
+(`AskUserQuestion` en Claude Code; en Codex, ver la tabla de arriba). Si deja una
+ronda sin responder, preguntale una sola vez si prefiere seguir otro momento; no
 insistas.
 
 ---
@@ -156,8 +155,8 @@ insistas.
    prioridad, el estado y el tiempo que eligió.
 2. Mostrale al tutor un resumen en el chat: las tareas por prioridad, una línea cada
    una con su tiempo por semana **y con qué lo hace** ("Menos de 1 hora, con la
-   skill"), **el estado con su porqué y qué falta** (un estado solo no le dice nada),
-   el total y la conclusión. **Esperá su OK antes de generar el PDF**, con una pregunta
+   skill"), **la prioridad que proponés y el estado, con su porqué y qué falta** (un
+   estado solo no le dice nada), el total y la conclusión. **Esperá su OK antes de generar el PDF**, con una pregunta
    interactiva: "Generar el PDF" o "Cambiar algo". Si pide cambios,
    corregí el JSON, no el PDF.
 
@@ -217,7 +216,8 @@ Si está en otra materia, volvé a la Fase 2 con esa materia.
   qué saber.
 - **Cada frase y cada dato responden a algo.** El informe tiene lo que dice "Qué tiene
   que tener el informe" en `references/redaccion.md`; lo demás no va.
-- **Pocas preguntas.** Una tanda interactiva por área; lo demás lo redactás vos.
+- **Pocas preguntas.** 4 rondas, unos 3 minutos: vos proponés, el tutor confirma con un
+  clic. Lo demás lo redactás vos.
 - **Nada inventado.** Cada número sale del campus o del tutor. Si una tool falla o
   devuelve vacío, decilo y preguntá; un 0 puede ser "no hay" o "no se relevó".
 - **Sin nombres de alumnos** en el informe ni en las filas: el informe circula entre

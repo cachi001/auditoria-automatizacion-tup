@@ -9,8 +9,8 @@
   "Datos del aula al momento del relevamiento: 43 tareas (cierres de unidad, unas 23 prácticas y 7 integradores y proyectos) y 665 entregas corregidas en el cuatrimestre; 3 alumnos que entran al campus pero hace 7 días o más que no abren la materia, sobre 5 desenganchados; una consulta de foro sin responder sobre un error de IntelliJ con Lombok."
  ],
  "conclusion": [
-  "En total, la intervención del tutor en estas tareas suma entre 2 y 11 horas por semana, y entre 2 y 7 corresponden a las tareas de prioridad alta. El mayor peso está en la corrección de prácticas, integradores y parciales y en el coloquio oral del segundo parcial, entre 1 y 3 horas por semana cada uno. En la corrección, cada proyecto hay que ejecutarlo para saber si funciona; el coloquio hoy no tiene ninguna parte automatizada.",
-  "Conviene empezar por automatizar la compilación y ejecución de las entregas y la organización de los turnos del coloquio, que es donde más tiempo se va, y en paralelo los avisos a los alumnos que no entran al aula, que son urgentes."
+  "En total, la intervención semanal del tutor en estas tareas suma entre 1 y 8 horas por semana, y entre 1 y 4 corresponden a las tareas de prioridad alta. El mayor peso semanal está en la corrección de prácticas, integradores y parciales, entre 1 y 3 horas por semana: cada proyecto hay que ejecutarlo para saber si funciona. Aparte del total semanal está la pregunta oral del segundo parcial, que se repite en cada instancia: el tutor arma con IA la planilla de turnos, la actualiza a mano según lo que entrega cada alumno y toma el oral.",
+  "Conviene empezar por automatizar la compilación y ejecución de las entregas, que es lo que más tiempo lleva cada semana, y la planilla de turnos del oral para que se actualice sola desde Moodle. En paralelo, los avisos a los alumnos que no entran al aula, que son urgentes."
  ],
  "pasos": true,
  "tareas": [
@@ -33,20 +33,20 @@
   },
   {
    "prioridad": "alta",
-   "titulo": "Coloquio oral del segundo parcial",
-   "hoy": "Los turnos se organizan con una planilla y un foro de turnos, y las preguntas salen de la lista oficial de la cátedra. Todo eso se arma y se mantiene a mano.",
+   "titulo": "Pregunta oral del segundo parcial",
+   "hoy": "El tutor armó con IA una planilla modelo con los datos de los alumnos de la comisión (qué adeudaban y si habían rendido el parcial) para que eligieran su turno, y la fue actualizando a medida que entregaban, elegían turno o avanzaban. El oral lo toma el tutor.",
    "frecuencia": "En cada instancia del segundo parcial y su recuperatorio.",
-   "por_que": "Hay que cargar cada turno, avisar a cada alumno su horario, atender los cambios y preparar las preguntas para cada uno.",
-   "como_automatizar": "Una inscripción a turnos que se cargue sola en la planilla y envíe el aviso con el horario, y una selección automática de preguntas desde la lista oficial.",
+   "por_que": "Hay que revisar seguido qué entregó cada alumno y si avanzó, y actualizar a mano la planilla y los turnos.",
+   "como_automatizar": "Que la skill arme y actualice la planilla con los datos de Moodle (qué adeuda cada alumno y si rindió el parcial) y que los alumnos elijan turno con un formulario que la complete solo. Tomar el oral sigue siendo tarea del tutor.",
    "unidad": "Segundo parcial",
-   "hallazgo": "Turnos, avisos y preguntas del coloquio armados a mano.",
+   "hallazgo": "Planilla de turnos del oral armada con IA, pero cargada y actualizada a mano según lo que entrega cada alumno.",
    "automatizable": "Sí",
-   "como_corto": "Inscripción a turnos automática con aviso y selección de preguntas.",
-   "estado": "Pendiente",
-   "estado_motivo": "Ninguna herramienta resuelve una parte: turnos, avisos y preguntas se arman a mano.",
-   "falta": "Una inscripción a turnos que avise sola el horario y una selección automática de preguntas.",
-   "tiempo_semanal": "1 a 3 horas",
-   "con_que": "a mano"
+   "como_corto": "Planilla que se actualice sola desde Moodle e inscripción a turnos por formulario.",
+   "estado": "Parcial",
+   "estado_motivo": "La IA ayudó a armar la planilla; cargar los datos, revisarla a medida que entregan o eligen turno y tomar el oral siguen a cargo del tutor.",
+   "falta": "Que la planilla tome sola de Moodle lo que adeuda cada alumno y si rindió el parcial, y una inscripción a turnos que la complete.",
+   "tiempo_semanal": "Por instancia: menos de 1 hora para armar la planilla, más actualizarla y tomar el oral",
+   "con_que": "con IA para la planilla; el resto, el tutor"
   },
   {
    "prioridad": "alta",

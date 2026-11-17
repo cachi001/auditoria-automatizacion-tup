@@ -31,8 +31,8 @@ ESTADOS = {"Pendiente", "Parcial", "Cubierta"}
 # Nombres anteriores, aceptados para no romper JSON ya armados.
 ESTADOS_VIEJOS = {"En curso": "Parcial", "Resuelto": "Cubierta"}
 CAMPOS_TAREA = ("prioridad", "titulo", "hoy", "frecuencia", "por_que", "como_automatizar",
-                "unidad", "hallazgo", "automatizable", "como_corto", "estado")
-# Opcionales: tiempo_semanal, con_que, estado_motivo, falta, evidencia (solo links reales).
+                "hallazgo", "automatizable", "como_corto", "estado")
+# Opcionales: tiempo_semanal, con_que, estado_motivo, falta. Los campos viejos unidad y evidencia se ignoran.
 
 
 def sin_tildes(s: str) -> str:
@@ -202,17 +202,17 @@ def armar_html(d: dict) -> str:
                  "\"Sí\" en \"¿Subió el informe?\" y pegá el link. 4. Cargá cada tarea como una fila en la pestaña Hallazgos.</div>")
     o.append(f"<div class='apaisada'><h2><span class='num'>{next(n)}</span>Cómo se cargan en la pestaña Hallazgos</h2>"
              f"<p>Cada tarea de la sección {n_tareas} es una fila en la pestaña Hallazgos {e(materia)}. Las columnas son las mismas que en "
-             "la planilla. En Evidencia va el link a este informe, o a una planilla o mensaje que muestre la tarea si el tutor lo tiene.</p>"
+             "la planilla.</p>"
              "<p class='leyenda'>Prioridad: Alta, Media o Baja. ¿Automatizable?: Sí, No o A evaluar. Estado: Pendiente (ninguna "
              "herramienta la cubre), Parcial (una herramienta hace una parte y el tutor el resto) o Cubierta (ya no necesita al tutor).</p>"
-             "<table class='planilla'><colgroup><col style='width:8%'><col style='width:10%'>"
-             "<col style='width:11%'><col style='width:21%'><col style='width:11%'><col style='width:6.5%'><col style='width:9.5%'>"
-             "<col style='width:15%'><col style='width:8%'></colgroup><tr><th>Fecha</th><th>Nombre y apellido</th>"
-             "<th>Unidad o actividad</th><th>Hallazgo</th><th>Evidencia (link)</th><th>Prioridad</th><th>¿Automatizable?</th>"
+             "<table class='planilla'><colgroup><col style='width:8%'><col style='width:9%'>"
+             "<col style='width:13%'><col style='width:20%'><col style='width:12%'><col style='width:6.5%'><col style='width:9.5%'>"
+             "<col style='width:14%'><col style='width:8%'></colgroup><tr><th>Fecha</th><th>Nombre y apellido</th>"
+             "<th>Tarea</th><th>Hallazgo</th><th>Tiempo por semana</th><th>Prioridad</th><th>¿Automatizable?</th>"
              "<th>Cómo se podría automatizar</th><th>Estado</th></tr>")
     for t in d["tareas"]:
-        o.append(f"<tr><td class='nw'>{e(d['fecha'])}</td><td>{e(d['nombre'])}</td><td>{e(t['unidad'])}</td>"
-                 f"<td>{e(t['hallazgo'])}</td><td>{e(str(t.get('evidencia') or '').strip() or 'Link a este informe')}</td><td>{NOMBRE_PR[t['prioridad']]}</td>"
+        o.append(f"<tr><td class='nw'>{e(d['fecha'])}</td><td>{e(d['nombre'])}</td><td>{e(t['titulo'])}</td>"
+                 f"<td>{e(t['hallazgo'])}</td><td>{e(tiempo_con_que(t) or 'Sin estimar')}</td><td>{NOMBRE_PR[t['prioridad']]}</td>"
                  f"<td>{e(t['automatizable'])}</td><td>{e(t['como_corto'])}</td><td>{e(t['estado'])}</td></tr>")
     o.append("</table></div></body></html>")
     return "".join(o)

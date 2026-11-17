@@ -34,14 +34,14 @@ La columna G tiene una fórmula que cuenta sola los hallazgos: **no escribas en 
 
 **Hallazgos Programación N**
 
-| A | B | C | D | E | F | G | H | I |
-|---|---|---|---|---|---|---|---|---|
-| Fecha | Nombre y apellido | Unidad o actividad | Hallazgo | Evidencia (link) | Prioridad | ¿Automatizable? | Cómo se podría automatizar | Estado |
+| A | B | C | D | E | F | G | H | I | J |
+|---|---|---|---|---|---|---|---|---|---|
+| Fecha | Nombre y apellido | Unidad o actividad | Hallazgo | Evidencia (link) | Prioridad | ¿Automatizable? | Cómo se podría automatizar | Estado | Por qué está en ese estado |
 
 Del JSON salen así: `fecha`, `nombre`, `unidad`, `hallazgo`, evidencia (siempre
 el link del PDF del informe subido a Informes),
 prioridad (`Alta`/`Media`/`Baja`, con mayúscula), `automatizable`, `como_corto`,
-`estado`. El nombre de la columna B se elige de una lista armada con la pestaña
+`estado`, `estado_motivo`. El nombre de la columna B se elige de una lista armada con la pestaña
 Personas, así que **Personas va primero** y el nombre tiene que ser idéntico.
 
 ## Con los conectores de Google (lo recomendado)
@@ -76,7 +76,7 @@ las filas de Hallazgos y el nombre del PDF) y esperá su OK con una pregunta int
 4. **Hallazgos.** Leé la columna `A` desde la fila 5 para encontrar la primera fila
    vacía. Si ya hay filas de este tutor (por ejemplo, de una carga anterior),
    preguntale si las reemplazás o agregás las nuevas. Escribí todas las tareas en
-   `A:I`, una fila por tarea. La comisión no va: ya está en la fila de Personas.
+   `A:J`, una fila por tarea. La comisión no va: ya está en la fila de Personas.
 5. **Comprobá** leyendo de nuevo los rangos que escribiste, y mostrale al tutor los
    links del PDF y de la planilla. Si algo no quedó, decilo; no lo des por cargado.
 

@@ -37,6 +37,10 @@ tendencia es decir "eso ya lo hace la skill" y dejarlo afuera.
 Si una tool falla o devuelve vacío, decilo y preguntale al tutor el dato. Nunca
 rellenes un número que no salió del campus o del tutor.
 
+Si una tool marca un resultado como **no verificable** (por ejemplo, `auditar_aula`
+con links de NotebookLM, Colab o YouTube que "caen en login" sin sesión), eso no es
+un hallazgo: no lo pongas en el informe como un problema del aula.
+
 Usá del campus solo **cantidades y hechos del aula** (cantidad de tareas, de avisos,
 de links rotos). Nunca pongas nombres de alumnos en el informe. Ojo: `demora_correccion`
 devuelve todas las comisiones del curso con el nombre de cada tutor; usá solo las filas

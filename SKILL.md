@@ -127,7 +127,8 @@ Por cada bloque:
 4. **Redactá vos** qué hace hoy, por qué le lleva tiempo y cómo se podría automatizar,
    a partir de sus respuestas y de lo que viste en el aula. No le pidas que lo escriba.
 5. **Proponé prioridad y estado** en una sola pregunta, con tu propuesta primero y
-   "(Recomendado)", y una línea con el porqué. Ejemplo: "Para 'Seguimiento de
+   "(Recomendado)", y una línea con el porqué. El estado que proponés sale de lo que
+   contestó en "cómo la hacés": no lo vuelvas a decidir de cero. Ejemplo: "Para 'Seguimiento de
    atrasados' propongo Alta / Parcial: la skill te arma la lista, pero vos escribís
    cada mensaje. ¿Confirmás?". Lo que elija el tutor es lo que va.
    El estado dice **cuánto cubren hoy las herramientas la tarea**: Pendiente (ninguna
@@ -209,6 +210,13 @@ Si está en otra materia, volvé a la Fase 2 con esa materia.
   tools de escritura de `tup-campus-navigator` no se usan acá.
 - **La IA propone, el tutor decide.** Vos armás las opciones, redactás y recomendás;
   la última decisión es del tutor. Si no la confirmó, no está en el informe.
+- **El tutor cuenta los hechos, la IA concluye con criterios.** Él dice qué hace, con
+  qué, cada cuánto y cuánto tiempo. Si se puede automatizar, cómo, qué falta y el
+  estado los concluís vos con los criterios fijos de `references/redaccion.md`, para
+  que todos los informes salgan con la misma vara. No le preguntes lo que no tiene por
+  qué saber.
+- **Cada frase y cada dato responden a algo.** El informe tiene lo que dice "Qué tiene
+  que tener el informe" en `references/redaccion.md`; lo demás no va.
 - **Pocas preguntas.** Una tanda interactiva por área; lo demás lo redactás vos.
 - **Nada inventado.** Cada número sale del campus o del tutor. Si una tool falla o
   devuelve vacío, decilo y preguntá; un 0 puede ser "no hay" o "no se relevó".

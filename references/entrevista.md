@@ -92,8 +92,7 @@ valores exactos que acepta la planilla.
 | Frecuencia y tiempo de intervención (juntos, una pregunta) | Interactiva | Ej.: Diaria, mucho tiempo · Diaria, algo de tiempo · Picos en parciales · Semanal (ver el modelo abajo) |
 | Prioridad y estado (juntos) | Interactiva, tu propuesta primero con "(Recomendado)" y el porqué | Ej.: Alta / Parcial · Alta / Pendiente · Media / Parcial |
 | Temas o casos de cada área | Interactiva, selección múltiple, armada con lo que viste en el aula | Ej.: Parciales y recuperatorios · TPI y video · Notas y condición · Inicio de cursada |
-| ¿Se puede automatizar? | Interactiva | Sí · No · A evaluar |
-| Qué hace hoy, por qué lleva tiempo, idea de automatización | Lo redactás vos con sus respuestas y se lo mostrás en el borrador | No lleva opciones |
+| Qué hace hoy, por qué lleva tiempo, si se puede automatizar y cómo, qué falta | No se pregunta: lo concluís vos con los criterios de `references/redaccion.md` y se lo mostrás en el borrador | No lleva opciones |
 | OK del borrador | Interactiva | Generar el PDF · Cambiar algo |
 
 Cada pregunta interactiva tiene que entenderse sola: nombrá el área o la tarea en el
@@ -147,8 +146,8 @@ tutor puede ver solo el cuadro de la pregunta.
   El porqué que das en la pregunta se guarda como **qué cubre la herramienta y
   qué hace el tutor** (`estado_motivo`), y sumá **qué falta** para resolverla (`falta`). Ejemplo:
   "La skill ya arma la lista de quién adeuda; escribir y enviar cada mensaje sigue a
-  cargo del tutor"; qué falta "que redactar y enviar cada recordatorio no dependa del
-  tutor" (la solución concreta va aparte, en "cómo automatizar").
+  cargo del tutor"; qué falta "una plantilla con lo que adeuda cada alumno y el envío desde la skill"
+  (la pieza concreta, no la frase del estado dada vuelta).
 - **Frecuencia y tiempo en una sola pregunta**, con opciones que digan las dos cosas:
 
   > ¿Con qué frecuencia respondés mensajes privados y consultas de foro de Prog I, y

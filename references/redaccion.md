@@ -32,7 +32,7 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
       "como_corto": "Aviso automático con plantilla según los días sin ingresar.",
       "estado": "Parcial",
       "estado_motivo": "La skill ya arma la lista de quién no entra; avisarles sigue a cargo del tutor.",
-      "falta": "que avisarle a cada alumno no dependa del tutor."
+      "falta": "un aviso con plantilla que se envíe solo al pasar cierta cantidad de días sin ingresar."
     }
   ],
   "herramientas": [
@@ -66,9 +66,8 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
   - `estado_motivo`: qué cubre la herramienta y qué sigue haciendo el tutor (en
     Pendiente, que ninguna herramienta cubre la tarea y por qué).
   - `falta`: qué parte todavía no está resuelta para que la tarea deje de necesitar
-    al tutor, dicho como necesidad ("que el envío de cada aviso no dependa del
-    tutor"). **No repitas la solución**: la propuesta concreta va en
-    `como_automatizar`.
+    al tutor: la pieza concreta (ver los criterios más abajo). Nunca la frase del
+    estado dada vuelta.
 - `herramientas`: las que usa el tutor, con qué resuelve cada una y qué sigue
   necesitándolo. Arman la tabla de la sección "Qué se considera intervención del tutor".
 - `objetivo` es opcional: si no está, el script usa el texto estándar.
@@ -79,6 +78,44 @@ de este mismo JSON en la Fase 6. Vos escribís solo el contenido, en un archivo
 
 Los informes de referencia están en `assets/ejemplos/programacion-1.json` y
 `assets/ejemplos/programacion-3.json`. Leé uno si dudás del tono o del largo.
+
+## Qué tiene que tener el informe
+
+Cada tarea responde estas siete cosas, y nada más:
+
+1. Qué hace hoy el tutor y con qué (`hoy`, `con_que`).
+2. Cada cuánto y cuánto tiempo le lleva (`frecuencia`, `tiempo_semanal`).
+3. Por qué le lleva tiempo (`por_que`).
+4. Cuánto la cubren las herramientas: qué hace la herramienta y qué hace el tutor
+   (`estado`, `estado_motivo`).
+5. Qué pieza concreta falta (`falta`).
+6. Cómo se podría automatizar (`automatizable`, `como_automatizar`).
+7. Qué prioridad tiene (`prioridad`).
+
+En "Cómo se relevó" van solo los datos del aula que se usan en alguna tarea. **Si una
+frase o un dato no responde a ninguna de esas preguntas, o no salió del tutor ni de una
+tool que lo confirme, no va.** Antes de mostrar el borrador, pasá cada dato del
+relevamiento y cada frase de las tareas por esta regla.
+
+Un dato del campus que contradice lo que dijo el tutor (por ejemplo, la cantidad de
+avisos del foro incluye los de otros docentes) no se usa: lo que vale es lo que dijo
+el tutor sobre su propio trabajo.
+
+## Qué responde el tutor y qué concluye la IA
+
+El tutor cuenta **los hechos de su trabajo**, que solo él sabe: qué tareas hace, cómo
+las hace (a mano, con la skill, con Active-IA), cada cuánto y cuánto tiempo le llevan,
+y qué consultas se le repiten. **No le preguntes si algo se puede automatizar ni cómo:**
+no tiene por qué saberlo. Eso lo concluís vos con estos criterios, y él lo ve en el
+borrador:
+
+| Campo | Criterio |
+|---|---|
+| `estado` | Sale de cómo hace la tarea. **Pendiente**: ninguna herramienta la cubre. **Parcial**: una herramienta hace una parte y el tutor el resto. **Cubierta**: ya no necesita al tutor. |
+| `automatizable` | **Sí**: la parte del tutor es repetitiva y sigue reglas (el mismo mensaje con otros datos, datos que ya están en Moodle, fechas del aula). **A evaluar**: una parte se puede asistir, pero otra necesita criterio del tutor (revisar una corrección, un caso especial). **No**: la tarea es criterio o trato personal de punta a punta (leer el contenido de un apunte, tomar un oral). |
+| `como_automatizar` | Una propuesta concreta que use lo que ya existe (la skill, Active-IA, plantillas, avisos programados de Moodle) para la parte que hoy hace el tutor. |
+| `falta` | La pieza concreta que falta para cubrir la tarea (una plantilla con lo que adeuda cada alumno, el envío automático, una respuesta modelo). Nunca la frase del estado dada vuelta ("que no dependa del tutor"). |
+| `prioridad` (propuesta) | **Alta**: lleva tiempo todas las semanas o afecta a toda la comisión (los alumnos que no entran van siempre en Alta). **Media**: frecuente pero acotada. **Baja**: ocasional. El tutor la confirma. |
 
 ## Reglas de redacción
 
